@@ -1,56 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Mucahit SEN - Flutter Developer Portfolio. Cross-platform mobile app development with Flutter, Dart, Firebase. iF Design Award winner. Istanbul & Bursa based." />
-    <meta name="keywords" content="Flutter Developer, Mobile App Developer, Dart, Firebase, Cross-Platform, iOS, Android, Istanbul, Bursa" />
-    <meta name="author" content="Mucahit SEN" />
-    <title>Mucahit SEN - Flutter Developer Portfolio</title>
+    <meta name="description" content="Lukeri Studio - Üst Düzey Dijital Zanaatkarlık. Flutter, Mobil Geliştirme ve Premium UI/UX Tasarımında Uzmanlaşmış Bir Teknoloji Stüdyosu." />
+    <meta name="keywords" content="Lukeri Studio, Flutter Geliştirme, Mobil Uygulama Stüdyosu, Premium UI/UX, Dart, Çapraz Platform" />
+    <meta name="author" content="Lukeri Studio" />
+    <title>Lukeri Studio | Dijital Zanaatkarlık</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/index.css">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
+              mono: ['Fragment Mono', 'monospace'],
             },
             colors: {
-              'brand-bg': '#F9F9F9',
-              'card-blue': '#2A55D9',
-              'card-beige': '#F2EFE9',
-              'card-red': '#C8322B',
-              'card-orange': '#E58A36',
-              'text-dark': '#111111',
+              'studio-bg': '#FFFFFF',
+              'studio-text': '#101010',
+              'studio-gray': '#666666',
+              'studio-border': '#E5E5E5',
             }
           }
         }
       }
     </script>
-    <style>
-      body {
-        background-color: #F9F9F9;
-        color: #111111;
-        -webkit-font-smoothing: antialiased;
-      }
-      /* Custom scrollbar for better aesthetics */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #ccc;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #888;
-      }
-    </style>
   <script type="importmap">
 {
   "imports": {
@@ -61,9 +37,8 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
-  <body>
+  <body class="bg-studio-bg text-studio-text">
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>

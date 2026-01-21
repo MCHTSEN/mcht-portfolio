@@ -1,5 +1,6 @@
 {
-  "name": "Mucahit SEN - Flutter Developer Portfolio",
-  "description": "Portfolio website of Mucahit SEN, a Flutter Developer specializing in cross-platform mobile app development, featuring projects like Bursali Otomotiv, CatchPad, and Piqup (iF Design Award winner).",
-  "requestFramePermissions": []
+  "name": "Lukeri Studio - Üst Düzey Dijital Zanaatkarlık",
+  "description": "Yüksek performanslı dijital ürünler ve çapraz platform mimarisinde uzmanlaşmış premium yazılım stüdyosu. Piqup gibi ödüllü platformların ve endüstri liderleri için kurumsal ekosistemlerin yaratıcısı.",
+  "requestFramePermissions": [],
+  "Overwrite": true
 }

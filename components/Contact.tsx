@@ -1,111 +1,93 @@
+import { ArrowUpRight, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import React from 'react';
-import { Linkedin, Mail, Github, Phone, MapPin, ExternalLink } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-24 px-6 max-w-4xl mx-auto">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Iletisime Gecin</h2>
-        <p className="text-gray-500 max-w-lg mx-auto">Yeni projeler, fikirler veya isbirligi firsatlari icin benimle iletisime gecmekten cekinmeyin.</p>
-      </div>
+    <section id="contact" className="py-40 bg-studio-bg/30">
+      <div className="max-w-[1800px] mx-auto px-6">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
+          
+          {/* Header & Intent */}
+          <div className="lg:col-span-6 space-y-12">
+            <div className="space-y-6">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-[0.4em] text-blue-600 bg-blue-50 px-3 py-1.5 inline-block">İletişim / İş Birliği</span>
+              <h2 className="text-6xl md:text-8xl font-bold tracking-tighter leading-none uppercase">
+                VİZYONUNUZU <br /><span className="text-blue-600">ÖLÇEKLENDİRMEYE</span><br />HAZIR MISINIZ?
+              </h2>
+            </div>
+            
+            <p className="text-xl md:text-2xl text-studio-gray font-medium max-w-md leading-snug tracking-tight">
+              Stüdyo kapasitemiz 2025 ortaklıkları için uygundur. Teknik mimari ve ürün stratejinizi birlikte kurgulayalım.
+            </p>
 
-      {/* Contact Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-        {/* Email Card */}
-        <a
-          href="mailto:mchtsenn16@gmail.com"
-          className="group bg-white rounded-3xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-blue-200 transition-all flex items-center gap-4"
-        >
-          <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center group-hover:bg-blue-500 transition-colors">
-            <Mail className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
+            <div className="space-y-6 pt-12">
+               <div className="flex items-center gap-4 text-studio-text">
+                  <div className="w-12 h-12 bg-white border-2 border-studio-text flex items-center justify-center shadow-[4px_4px_0px_#2563eb]">
+                    <MapPin size={20} className="text-blue-600" />
+                  </div>
+                  <span className="text-sm font-mono font-bold uppercase tracking-widest underline decoration-blue-600 underline-offset-4">Dijital Karargah / IST & BURSA</span>
+               </div>
+            </div>
           </div>
-          <div>
-            <p className="text-sm text-gray-400 mb-1">Email</p>
-            <p className="font-semibold text-gray-900">mchtsenn16@gmail.com</p>
-          </div>
-        </a>
 
-        {/* Phone Card */}
-        <a
-          href="tel:+905050161116"
-          className="group bg-white rounded-3xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-green-200 transition-all flex items-center gap-4"
-        >
-          <div className="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center group-hover:bg-green-500 transition-colors">
-            <Phone className="w-6 h-6 text-green-600 group-hover:text-white transition-colors" />
-          </div>
-          <div>
-            <p className="text-sm text-gray-400 mb-1">Telefon</p>
-            <p className="font-semibold text-gray-900">+90 505 016 1116</p>
-          </div>
-        </a>
+          {/* Contact Methods */}
+          <div className="lg:col-span-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px] bg-studio-text border-2 border-studio-text shadow-[16px_16px_0px_#e5e7eb]">
+              
+              {/* Email */}
+              <a href="mailto:mchtsenn16@gmail.com" className="group bg-white p-12 hover:bg-blue-600 hover:text-white transition-all duration-500 flex flex-col justify-between aspect-square">
+                 <div className="flex justify-between items-start">
+                    <Mail size={32} strokeWidth={1} />
+                    <ArrowUpRight size={24} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                 </div>
+                 <div className="space-y-2">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-white/70">E-Posta Hattı</span>
+                    <p className="text-lg font-bold">mchtsenn116@gmail.com</p>
+                 </div>
+              </a>
 
-        {/* GitHub Card */}
-        <a
-          href="https://github.com/MCHTSEN"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group bg-white rounded-3xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-300 transition-all flex items-center gap-4"
-        >
-          <div className="w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center group-hover:bg-gray-900 transition-colors">
-            <Github className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors" />
-          </div>
-          <div className="flex-1">
-            <p className="text-sm text-gray-400 mb-1">GitHub</p>
-            <p className="font-semibold text-gray-900">github.com/MCHTSEN</p>
-          </div>
-          <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-gray-700 transition-colors" />
-        </a>
+              {/* LinkedIn */}
+              <a href="https://linkedin.com/in/mucahit-sen-a3933a184" target="_blank" rel="noopener noreferrer" className="group bg-white p-12 hover:bg-black hover:text-white transition-all duration-500 flex flex-col justify-between aspect-square">
+                 <div className="flex justify-between items-start">
+                    <Linkedin size={32} strokeWidth={1} />
+                    <ArrowUpRight size={24} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                 </div>
+                 <div className="space-y-2">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-white/70">Profesyonel Bağlantı</span>
+                    <p className="text-lg font-bold">LinkedIn</p>
+                 </div>
+              </a>
 
-        {/* LinkedIn Card */}
-        <a
-          href="https://linkedin.com/in/mucahit-sen-a3933a184"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group bg-white rounded-3xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-blue-300 transition-all flex items-center gap-4"
-        >
-          <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center group-hover:bg-blue-700 transition-colors">
-            <Linkedin className="w-6 h-6 text-blue-700 group-hover:text-white transition-colors" />
-          </div>
-          <div className="flex-1">
-            <p className="text-sm text-gray-400 mb-1">LinkedIn</p>
-            <p className="font-semibold text-gray-900">Mucahit SEN</p>
-          </div>
-          <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-blue-700 transition-colors" />
-        </a>
-      </div>
+              {/* GitHub */}
+              <a href="https://github.com/MCHTSEN" target="_blank" rel="noopener noreferrer" className="group bg-white p-12 hover:bg-black hover:text-white transition-all duration-500 flex flex-col justify-between aspect-square">
+                 <div className="flex justify-between items-start">
+                    <Github size={32} strokeWidth={1} />
+                    <ArrowUpRight size={24} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                 </div>
+                 <div className="space-y-2">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-white/70">Açık Kaynak</span>
+                    <p className="text-lg font-bold">GitHub</p>
+                 </div>
+              </a>
 
-      {/* Location Info */}
-      <div className="text-center">
-        <div className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 rounded-full text-gray-600">
-          <MapPin size={18} />
-          <span className="font-medium">Istanbul & Bursa, Turkiye</span>
+              {/* Call */}
+              <a href="tel:+905050161116" className="group bg-blue-600 text-white p-12 transition-all duration-500 flex flex-col justify-between aspect-square">
+                 <div className="flex justify-between items-start">
+                    <Phone size={32} strokeWidth={1} />
+                    <ArrowUpRight size={24} className="opacity-40 group-hover:opacity-100 transition-opacity" />
+                 </div>
+                 <div className="space-y-2">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-white/50">Doğrudan Hat</span>
+                    <p className="text-lg font-bold">Görüşme Planla</p>
+                 </div>
+              </a>
+
+            </div>
+          </div>
+
         </div>
-      </div>
 
-      {/* Social Links Row */}
-      <div className="flex justify-center gap-4 mt-12">
-        <a
-          href="https://github.com/MCHTSEN"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors"
-        >
-          <Github size={20} />
-        </a>
-        <a
-          href="https://linkedin.com/in/mucahit-sen-a3933a184"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors"
-        >
-          <Linkedin size={20} />
-        </a>
-        <a
-          href="mailto:mchtsenn16@gmail.com"
-          className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 text-white rounded-full flex items-center justify-center hover:opacity-90 transition-opacity"
-        >
-          <Mail size={20} />
-        </a>
       </div>
     </section>
   );

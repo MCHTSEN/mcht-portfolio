@@ -1,13 +1,12 @@
-import React from 'react';
-import { Navbar } from './components/Navbar';
+import { Contact } from './components/Contact';
 import { Hero } from './components/Hero';
 import { Highlights } from './components/Highlights';
+import { Navbar } from './components/Navbar';
 import { WorkSection } from './components/WorkSection';
-import { Contact } from './components/Contact';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#F9F9F9] text-text-dark font-sans selection:bg-black selection:text-white">
+    <div className="min-h-screen bg-studio-bg text-studio-text selection:bg-studio-text selection:text-white">
       <Navbar />
       <main>
         <Hero />
@@ -16,12 +15,25 @@ function App() {
         <Contact />
       </main>
       
-      <footer className="py-10 text-center text-gray-400 text-sm border-t border-gray-100">
-        <p className="mb-2">© 2025 Mucahit SEN. All rights reserved.</p>
-        <p className="text-xs">Flutter | Dart | Mobile Development</p>
+      <footer className="py-20 px-6 max-w-[1800px] mx-auto studio-border-t">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
+          <div className="space-y-4">
+             <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-studio-text flex items-center justify-center text-white font-mono text-xs font-bold transition-transform hover:rotate-90">LS</div>
+                <span className="font-bold text-sm tracking-tighter uppercase font-mono">Lukeri Studio</span>
+             </div>
+             <p className="text-[10px] font-mono text-studio-gray uppercase tracking-widest leading-relaxed max-w-xs">
+                Gelecek nesil endüstri liderleri için yüksek performanslı dijital ürünler tasarlıyoruz.
+             </p>
+          </div>
+          
+          <div className="flex flex-col md:items-end gap-2">
+             <p className="text-[10px] font-mono text-studio-gray uppercase tracking-[0.2em]">© 2025 Lukeri Studio. Tüm hakları saklıdır.</p>
+             <p className="text-[10px] font-mono text-studio-text font-bold uppercase tracking-[0.2em]">İstanbul | Bursa | Global Digital HQ</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
 }
-
 export default App;

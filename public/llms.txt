@@ -1,0 +1,42 @@
+# Lukeri Studio - AI Discovery File
+# https://lukeristudio.com
+
+## About
+Lukeri Studio is a premium digital craftsmanship studio specializing in Flutter development, mobile applications, and UI/UX design. Based in Istanbul and Bursa, Turkey, we create high-performance digital products for next-generation industry leaders.
+
+## Services
+- Flutter & Dart Development
+- Cross-Platform Mobile Applications
+- Premium UI/UX Design
+- BLE & IoT Systems Integration
+- Cloud Architecture (Firebase, Cloud Functions)
+- Enterprise Systems Development
+
+## Expertise
+- Clean Architecture & SOLID Principles
+- Riverpod & BLoC State Management
+- Real-time Synchronization
+- Offline-First Applications
+- CI/CD Automation (CodeMagic, GitHub Actions)
+
+## Awards
+- iF Design Award 2024 Winner (Piqup Project)
+
+## Contact
+- Email: hello@lukeristudio.com
+- Phone: +90 505 016 1116
+- Location: Istanbul & Bursa, Turkey
+
+## Social
+- GitHub: https://github.com/MCHTSEN
+- LinkedIn: https://linkedin.com/in/mucahit-sen-a3933a184
+
+## Technical Stack
+Flutter, Dart, Firebase, Firestore, Cloud Functions, BLE, IoT, Riverpod, BLoC, Clean Architecture
+
+## Language
+Primary: Turkish (tr)
+Secondary: English (en)
+
+## Last Updated
+2026-01-21

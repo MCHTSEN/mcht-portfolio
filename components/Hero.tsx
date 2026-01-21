@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative pt-48 pb-32 px-6 max-w-[1800px] mx-auto overflow-hidden">
+    <section aria-label="Ana Başlık" className="relative pt-48 pb-32 px-6 max-w-[1800px] mx-auto overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-studio-primary/5 rounded-full blur-[120px] -z-10 animate-pulse"></div>
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-studio-primary/5 rounded-full blur-[100px] -z-10"></div>

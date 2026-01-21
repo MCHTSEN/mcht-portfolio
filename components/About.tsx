@@ -4,7 +4,7 @@ import React from 'react';
 
 export const About: React.FC = () => {
   return (
-    <section id="about" className="py-48 bg-studio-text text-white overflow-hidden relative">
+    <section id="about" aria-labelledby="about-heading" className="py-48 bg-studio-text text-white overflow-hidden relative">
       {/* Decorative background text */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-bold opacity-[0.02] whitespace-nowrap pointer-events-none uppercase tracking-tighter">
         Digital Craftsmanship
@@ -24,7 +24,8 @@ export const About: React.FC = () => {
               <span className="text-[10px] font-mono font-bold uppercase tracking-[0.4em]">Manifestomuz</span>
             </motion.div>
 
-            <motion.h2 
+            <motion.h2
+              id="about-heading"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

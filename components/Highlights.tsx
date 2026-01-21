@@ -49,7 +49,7 @@ const items = [
 
 export const Highlights: React.FC = () => {
   return (
-    <section id="highlights" className="py-40 bg-transparent relative overflow-hidden">
+    <section id="highlights" aria-labelledby="highlights-heading" className="py-40 bg-transparent relative overflow-hidden">
       <div className="max-w-[1800px] mx-auto px-6">
         
         {/* Header Section */}
@@ -64,7 +64,8 @@ export const Highlights: React.FC = () => {
               <Sparkle size={12} fill="currentColor" />
               <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em]">Kapasitemiz</span>
             </motion.div>
-            <motion.h2 
+            <motion.h2
+              id="highlights-heading"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

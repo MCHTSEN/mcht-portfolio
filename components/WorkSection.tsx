@@ -41,7 +41,7 @@ export const WorkSection: React.FC = () => {
 
   return (
     <>
-      <section id="work" className="py-48 bg-transparent">
+      <section id="work" aria-labelledby="work-heading" className="py-48 bg-transparent">
         <div className="max-w-[1800px] mx-auto px-6">
           
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-40">
@@ -54,7 +54,8 @@ export const WorkSection: React.FC = () => {
               >
                 <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em]">Seçilmiş Projeler</span>
               </motion.div>
-              <motion.h2 
+              <motion.h2
+                id="work-heading"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -151,13 +152,13 @@ export const WorkSection: React.FC = () => {
                               whileHover={{ y: -10, x: -10 }}
                               className="w-[80%] aspect-video bg-white border border-studio-border/30 rounded-lg shadow-xl overflow-hidden transform -translate-x-10 -translate-y-6 transition-transform duration-700 hover:z-20"
                             >
-                              <img src={project.screenshots[0]} alt="desktop-1" className="w-full h-full object-cover" />
+                              <img src={project.screenshots[0]} alt={`${project.title} ekran görüntüsü 1`} className="w-full h-full object-cover" width="800" height="450" loading="lazy" />
                             </motion.div>
                             <motion.div 
                               whileHover={{ y: 10, x: 10 }}
                               className="absolute w-[80%] aspect-video bg-white border border-studio-border/30 rounded-lg shadow-2xl overflow-hidden transform translate-x-10 translate-y-6 transition-transform duration-700 z-10"
                             >
-                              <img src={project.screenshots[1]} alt="desktop-2" className="w-full h-full object-cover" />
+                              <img src={project.screenshots[1]} alt={`${project.title} ekran görüntüsü 2`} className="w-full h-full object-cover" width="800" height="450" loading="lazy" />
                             </motion.div>
                          </div>
                        ) : (
@@ -167,19 +168,19 @@ export const WorkSection: React.FC = () => {
                              whileHover={{ y: -20, rotate: -2 }}
                              className="w-32 md:w-44 aspect-[9/19] bg-white rounded-3xl border border-studio-border/30 shadow-xl overflow-hidden transform -rotate-6 translate-y-8 group-hover:translate-y-4 transition-transform duration-700"
                            >
-                              <img src={project.screenshots[0]} alt="mobile-1" className="w-full h-full object-cover" />
+                              <img src={project.screenshots[0]} alt={`${project.title} mobil ekran görüntüsü 1`} className="w-full h-full object-cover" width="270" height="585" loading="lazy" />
                            </motion.div>
                            <motion.div 
                              whileHover={{ y: -20, scale: 1.05 }}
                              className="w-36 md:w-52 aspect-[9/19] bg-white rounded-[2rem] border border-studio-border/30 shadow-2xl overflow-hidden z-20 scale-110 transform translate-y-0 group-hover:-translate-y-4 transition-transform duration-700"
                            >
-                              <img src={project.screenshots[1]} alt="mobile-2" className="w-full h-full object-cover" />
+                              <img src={project.screenshots[1]} alt={`${project.title} mobil ekran görüntüsü 2`} className="w-full h-full object-cover" width="270" height="585" loading="lazy" />
                            </motion.div>
                            <motion.div 
                              whileHover={{ y: -20, rotate: 2 }}
                              className="w-32 md:w-44 aspect-[9/19] bg-white rounded-3xl border border-studio-border/30 shadow-xl overflow-hidden transform rotate-6 translate-y-8 group-hover:translate-y-4 transition-transform duration-700"
                            >
-                              <img src={project.screenshots[2]} alt="mobile-3" className="w-full h-full object-cover" />
+                              <img src={project.screenshots[2]} alt={`${project.title} mobil ekran görüntüsü 3`} className="w-full h-full object-cover" width="270" height="585" loading="lazy" />
                            </motion.div>
                          </div>
                        )}

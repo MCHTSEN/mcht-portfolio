@@ -20,7 +20,7 @@ export const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-4' : 'py-8'}`}>
+    <nav role="navigation" aria-label="Ana navigasyon" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-4' : 'py-8'}`}>
       <div className={`max-w-[1800px] mx-auto px-6`}>
         <div className={`glass rounded-full flex items-center justify-between px-8 transition-all duration-500 ${scrolled ? 'h-16 border-studio-border/50 shadow-lg shadow-black/5' : 'h-20 border-transparent'}`}>
           <div className="flex items-center gap-8">
@@ -67,12 +67,16 @@ export const Navbar: React.FC = () => {
             </div>
           </div>
           
-          {/* Mobile indicator or menu could go here */}
-          <div className="md:hidden">
-             <div className="w-8 h-8 rounded-lg bg-studio-primary/10 flex items-center justify-center text-studio-primary">
-                <div className="w-4 h-[1px] bg-current relative after:absolute after:top-[-4px] after:w-full after:h-[1px] after:bg-current before:absolute before:top-[4px] before:w-full before:h-[1px] before:bg-current"></div>
-             </div>
-          </div>
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden w-8 h-8 rounded-lg bg-studio-primary/10 flex items-center justify-center text-studio-primary focus:outline-none focus:ring-2 focus:ring-studio-primary focus:ring-offset-2"
+            aria-label="Menüyü aç"
+            aria-expanded="false"
+            type="button"
+          >
+            <span className="sr-only">Navigasyon menüsünü aç</span>
+            <div className="w-4 h-[1px] bg-current relative after:absolute after:top-[-4px] after:w-full after:h-[1px] after:bg-current before:absolute before:top-[4px] before:w-full before:h-[1px] before:bg-current" aria-hidden="true"></div>
+          </button>
         </div>
       </div>
     </nav>

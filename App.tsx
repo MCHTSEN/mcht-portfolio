@@ -10,10 +10,17 @@ import { WorkSection } from './components/WorkSection';
 function App() {
   return (
     <div className="min-h-screen text-studio-text selection:bg-studio-primary selection:text-white">
+      {/* Skip Navigation Link for Accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-studio-primary focus:text-white focus:rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-studio-primary"
+      >
+        Ana içeriğe geç
+      </a>
       <BackgroundEffect />
       <CustomCursor />
       <Navbar />
-      <main className="relative z-10">
+      <main id="main-content" className="relative z-10" role="main">
         <Hero />
         <Highlights />
         <WorkSection />
@@ -21,7 +28,7 @@ function App() {
         <Contact />
       </main>
       
-      <footer className="py-20 px-6 max-w-[1800px] mx-auto studio-border-t">
+      <footer role="contentinfo" aria-label="Site altbilgisi" className="py-20 px-6 max-w-[1800px] mx-auto studio-border-t">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
           <div className="space-y-4">
              <div className="flex items-center gap-2">

@@ -4,7 +4,7 @@ import React from 'react';
 
 export const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-48 bg-transparent overflow-hidden">
+    <section id="contact" aria-labelledby="contact-heading" className="py-48 bg-transparent overflow-hidden">
       <div className="max-w-[1800px] mx-auto px-6">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
@@ -21,7 +21,8 @@ export const Contact: React.FC = () => {
                 <MessageSquare size={12} fill="currentColor" />
                 <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em]">İletişim Hattı</span>
               </motion.div>
-              <motion.h2 
+              <motion.h2
+                id="contact-heading"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

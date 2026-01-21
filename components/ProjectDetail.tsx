@@ -126,10 +126,13 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
                 
                 {/* Left Screen */}
                 <div className={`hidden lg:block opacity-40 transform -rotate-12 scale-75 transition-all duration-1000 overflow-hidden border-8 border-studio-text bg-white ${project.isDesktop ? 'w-[500px] aspect-video rounded-3xl' : 'w-72 aspect-[9/19] rounded-[2.5rem]'}`}>
-                   <img 
-                    src={project.screenshots[(currentImageIndex - 1 + project.screenshots.length) % project.screenshots.length]} 
-                    className="w-full h-full object-cover grayscale" 
-                    alt="prev-view"
+                   <img
+                    src={project.screenshots[(currentImageIndex - 1 + project.screenshots.length) % project.screenshots.length]}
+                    className="w-full h-full object-cover grayscale"
+                    alt={`${project.title} önceki görünüm`}
+                    width="500"
+                    height="300"
+                    loading="lazy"
                   />
                 </div>
 
@@ -137,10 +140,13 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
                 <div className={`relative z-20 scale-100 transition-all duration-700 studio-shadow-lg bg-studio-text ${project.isDesktop ? 'w-full max-w-[900px] aspect-video rounded-3xl p-3' : 'w-full max-w-[340px] md:max-w-[400px] aspect-[9/19] rounded-[3rem] p-4'}`}>
                   {!project.isDesktop && <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-studio-text rounded-b-3xl z-30"></div>}
                   <div className={`w-full h-full overflow-hidden bg-white relative group ${project.isDesktop ? 'rounded-2xl' : 'rounded-[2.2rem]'}`}>
-                    <img 
-                      src={project.screenshots[currentImageIndex]} 
-                      className="w-full h-full object-cover animate-in fade-in slide-in-from-bottom-4 duration-700" 
-                      alt={project.title}
+                    <img
+                      src={project.screenshots[currentImageIndex]}
+                      className="w-full h-full object-cover animate-in fade-in slide-in-from-bottom-4 duration-700"
+                      alt={`${project.title} detay görünümü`}
+                      width="900"
+                      height="500"
+                      loading="eager"
                     />
                     
                     {/* In-Screen Controls */}
@@ -157,10 +163,13 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
 
                 {/* Right Screen */}
                 <div className={`hidden lg:block opacity-40 transform rotate-12 scale-75 transition-all duration-1000 overflow-hidden border-8 border-studio-text bg-white ${project.isDesktop ? 'w-[500px] aspect-video rounded-3xl' : 'w-72 aspect-[9/19] rounded-[2.5rem]'}`}>
-                  <img 
-                    src={project.screenshots[(currentImageIndex + 1) % project.screenshots.length]} 
-                    className="w-full h-full object-cover grayscale" 
-                    alt="next-view"
+                  <img
+                    src={project.screenshots[(currentImageIndex + 1) % project.screenshots.length]}
+                    className="w-full h-full object-cover grayscale"
+                    alt={`${project.title} sonraki görünüm`}
+                    width="500"
+                    height="300"
+                    loading="lazy"
                   />
                 </div>
               </div>

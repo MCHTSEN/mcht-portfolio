@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
+/* Prevent CLS from font loading */
+html {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reserve space for fonts to prevent layout shift */
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+  size-adjust: 100%;
+  ascent-override: 90%;
+  descent-override: 20%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Fragment Mono';
+  font-display: swap;
+  size-adjust: 105%;
+}
+
 :root {
   /* Dynamic Color Theme System - Change these values to update the entire site */
   
@@ -22,6 +47,54 @@
   /* Fonts */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'Fragment Mono', 'SF Mono', 'Fira Code', monospace;
+}
+
+/* Accessibility: Focus Visible Styles */
+:focus-visible {
+  outline: 2px solid rgb(var(--accent-primary));
+  outline-offset: 2px;
+}
+
+/* Remove default focus for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Enhanced focus for interactive elements */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgb(var(--accent-primary));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 * {
@@ -138,6 +211,18 @@ h1, h2, h3, h4, .font-bold {
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Prevent layout shifts from animations */
+[class*="motion"] {
+  contain: layout style;
+}
+
+/* Ensure images don't cause CLS */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -160,6 +245,8 @@ h1, h2, h3, h4, .font-bold {
   z-index: -1;
   transform: translate(-50%, -50%);
   transition: width 0.3s, height 0.3s;
+  will-change: transform;
+  contain: strict;
 }
 
 /* Glassmorphism */

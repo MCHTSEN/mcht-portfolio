@@ -47,12 +47,12 @@ export const WorkSection: React.FC = () => {
             <div className="space-y-6">
               <span className="text-[10px] font-mono font-bold uppercase tracking-[0.4em] text-studio-gray bg-studio-border/30 px-3 py-1.5 inline-block">Portfolyo Dizini</span>
               <h2 className="text-5xl md:text-8xl font-bold tracking-tighter leading-none">
-                SEÇKİN<br />STÜDYO İŞLERİ.
+                SON<br />ÇALIŞMALAR.
               </h2>
             </div>
             <div className="max-w-sm">
               <p className="text-studio-gray font-medium text-base leading-relaxed">
-                İleri mühendislik ile geliştirilmiş dijital ürünler. Derin teknoloji IoT altyapılarından global ölçekli mobilite platformlarına kadar.
+                Mobil uygulamalar, IoT sistemleri ve kurumsal yazılım çözümleri. Konseptten lansmana kadar uçtan uca geliştirme.
               </p>
             </div>
           </div>

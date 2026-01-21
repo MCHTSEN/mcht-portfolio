@@ -27,7 +27,7 @@ const items = [
     tags: ["Çapraz Platform", "Dart", "Performans"]
   },
   {
-    category: "Arka Uç",
+    category: "Backend",
     title: "Firebase Entegrasyonu",
     description: "Cloud Firestore ile çevrimdışı öncelikli mimariler, karmaşık yetkilendirme akışları ve gerçek zamanlı veritabanı senkronizasyonu.",
     tags: ["NoSQL", "Yetkilendirme", "Senkron"]
@@ -48,15 +48,15 @@ export const Highlights: React.FC = () => {
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-24">
           <div className="max-w-3xl space-y-6">
-            <span className="text-[10px] font-mono font-bold uppercase tracking-[0.4em] text-studio-gray bg-studio-border/30 px-3 py-1.5">Yetkinlikler / Hizmetler</span>
+            <span className="text-[10px] font-mono font-bold uppercase tracking-[0.4em] text-studio-gray bg-studio-border/30 px-3 py-1.5">Hizmetler</span>
             <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-none">
-              MOBİL MÜHENDİSLİĞİN <br />
-              SINIRLARINI ZORLUYORUZ.
+              UZMANLIK<br />
+              ALANLARIMIZ.
             </h2>
           </div>
           <div className="max-w-sm lg:pb-2">
             <p className="text-studio-gray text-sm leading-relaxed font-medium">
-              Sadece uygulama geliştirmiyoruz; teknik karmaşıklığı estetik hassasiyetle dengeleyen dijital ürünler tasarlıyoruz.
+              Teknik derinlik ve kullanıcı odaklı tasarım anlayışını bir arada sunan çözümler.
             </p>
           </div>
         </div>

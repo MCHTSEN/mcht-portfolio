@@ -13,12 +13,12 @@ export const Contact: React.FC = () => {
             <div className="space-y-6">
               <span className="text-[10px] font-mono font-bold uppercase tracking-[0.4em] text-blue-600 bg-blue-50 px-3 py-1.5 inline-block">İletişim / İş Birliği</span>
               <h2 className="text-6xl md:text-8xl font-bold tracking-tighter leading-none uppercase">
-                VİZYONUNUZU <br /><span className="text-blue-600">ÖLÇEKLENDİRMEYE</span><br />HAZIR MISINIZ?
+                BİRLİKTE<br /><span className="text-blue-600">ÇALIŞALIM</span><br />MI?
               </h2>
             </div>
             
             <p className="text-xl md:text-2xl text-studio-gray font-medium max-w-md leading-snug tracking-tight">
-              Stüdyo kapasitemiz 2025 ortaklıkları için uygundur. Teknik mimari ve ürün stratejinizi birlikte kurgulayalım.
+              2026 iş birlikleri için kapasite ayrıldı. Projenizin teknik gereksinimlerini değerlendirelim.
             </p>
 
             <div className="space-y-6 pt-12">
@@ -26,7 +26,7 @@ export const Contact: React.FC = () => {
                   <div className="w-12 h-12 bg-white border-2 border-studio-text flex items-center justify-center shadow-[4px_4px_0px_#2563eb]">
                     <MapPin size={20} className="text-blue-600" />
                   </div>
-                  <span className="text-sm font-mono font-bold uppercase tracking-widest underline decoration-blue-600 underline-offset-4">Dijital Karargah / IST & BURSA</span>
+                  <span className="text-sm font-mono font-bold uppercase tracking-widest underline decoration-blue-600 underline-offset-4">İstanbul & Bursa</span>
                </div>
             </div>
           </div>
@@ -42,7 +42,7 @@ export const Contact: React.FC = () => {
                     <ArrowUpRight size={24} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                  </div>
                  <div className="space-y-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-white/70">E-Posta Hattı</span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-white/70">E-Posta</span>
                     <p className="text-lg font-bold">mchtsenn116@gmail.com</p>
                  </div>
               </a>
@@ -54,7 +54,7 @@ export const Contact: React.FC = () => {
                     <ArrowUpRight size={24} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                  </div>
                  <div className="space-y-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-white/70">Profesyonel Bağlantı</span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-white/70">LinkedIn</span>
                     <p className="text-lg font-bold">LinkedIn</p>
                  </div>
               </a>
@@ -78,7 +78,7 @@ export const Contact: React.FC = () => {
                     <ArrowUpRight size={24} className="opacity-40 group-hover:opacity-100 transition-opacity" />
                  </div>
                  <div className="space-y-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-white/50">Doğrudan Hat</span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-white/50">Telefon</span>
                     <p className="text-lg font-bold">Görüşme Planla</p>
                  </div>
               </a>

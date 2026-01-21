@@ -15,13 +15,13 @@ export const Hero: React.FC = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
             </span>
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-blue-600">2025 İş Birliklerine Açık</span>
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-blue-600">2026 İş Birliklerine Açık</span>
           </div>
           
           <h1 className="text-6xl md:text-8xl xl:text-[140px] font-bold tracking-tighter leading-[0.85] text-studio-text uppercase">
-            GELECEĞİN<br />
-            <span className="text-blue-600">DİJİTAL</span> SİSTEM<br />
-            <span className="text-studio-gray/20">MİMARİSİ.</span>
+            YAZILIM<br />
+            <span className="text-blue-600">GELİŞTİRME</span><br />
+            <span className="text-studio-gray/20">STÜDYOSU.</span>
           </h1>
           
           <div className="flex flex-wrap gap-6 pt-6">
@@ -42,10 +42,10 @@ export const Hero: React.FC = () => {
           <div className="space-y-6">
             <div className="flex items-center gap-3">
                <span className="w-8 h-[2px] bg-blue-600"></span>
-               <h3 className="text-xs font-mono font-bold uppercase tracking-[0.3em] text-studio-gray">VİZYON</h3>
+               <h3 className="text-xs font-mono font-bold uppercase tracking-[0.3em] text-studio-gray">YAKLAŞIM</h3>
             </div>
             <p className="text-xl md:text-2xl text-studio-text font-medium leading-snug tracking-tight">
-              Lukeri Studio; IoT ekosistemlerinden yapay zeka entegrasyonlarına kadar yüksek performanslı dijital platformlar inşa eden, mühendislik odaklı bir yapıdır.
+              Flutter ve Firebase ekosisteminde uzmanlaşmış, IoT entegrasyonlarından kurumsal sistemlere kadar geniş bir yelpazede çözümler üreten bir stüdyo.
             </p>
           </div>
 

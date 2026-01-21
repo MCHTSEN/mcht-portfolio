@@ -28,7 +28,7 @@ function App() {
           </div>
           
           <div className="flex flex-col md:items-end gap-2">
-             <p className="text-[10px] font-mono text-studio-gray uppercase tracking-[0.2em]">© 2025 Lukeri Studio. Tüm hakları saklıdır.</p>
+             <p className="text-[10px] font-mono text-studio-gray uppercase tracking-[0.2em]">© 2026 Lukeri Studio. Tüm hakları saklıdır.</p>
              <p className="text-[10px] font-mono text-studio-text font-bold uppercase tracking-[0.2em]">İstanbul | Bursa | Global Digital HQ</p>
           </div>
         </div>

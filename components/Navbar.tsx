@@ -21,8 +21,7 @@ export const Navbar: React.FC = () => {
             <span className="font-bold text-sm tracking-tighter uppercase">Lukeri Studio</span>
           </a>
           <div className="hidden lg:flex items-center gap-6 studio-border-l pl-8">
-            <span className="text-[10px] font-mono text-studio-gray uppercase tracking-widest leading-none bg-studio-border/30 px-2 py-1">Kuruluş 2025</span>
-            <span className="text-[10px] font-mono text-studio-gray uppercase tracking-widest leading-none">Üst Düzey Dijital Zanaatkarlık</span>
+            <span className="text-[10px] font-mono text-studio-gray uppercase tracking-widest leading-none">Yazılım Geliştirme Stüdyosu</span>
           </div>
         </div>
 

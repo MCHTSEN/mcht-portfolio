@@ -1,4 +1,5 @@
 import { About } from './components/About';
+import { BackgroundEffect } from './components/BackgroundEffect';
 import { Contact } from './components/Contact';
 import { CustomCursor } from './components/CustomCursor';
 import { Hero } from './components/Hero';
@@ -8,10 +9,11 @@ import { WorkSection } from './components/WorkSection';
 
 function App() {
   return (
-    <div className="min-h-screen bg-studio-bg text-studio-text selection:bg-studio-indigo selection:text-white">
+    <div className="min-h-screen text-studio-text selection:bg-studio-primary selection:text-white">
+      <BackgroundEffect />
       <CustomCursor />
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <Highlights />
         <WorkSection />

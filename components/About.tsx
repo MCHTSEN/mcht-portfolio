@@ -18,7 +18,7 @@ export const About: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="flex items-center gap-4 text-studio-indigo"
+              className="flex items-center gap-4 text-studio-primary"
             >
               <div className="h-px w-12 bg-current"></div>
               <span className="text-[10px] font-mono font-bold uppercase tracking-[0.4em]">Manifestomuz</span>
@@ -32,7 +32,7 @@ export const About: React.FC = () => {
               className="text-4xl md:text-7xl font-bold tracking-tighter leading-[1.1] uppercase"
             >
               SADECE KOD YAZMIYORUZ, <br />
-              <span className="text-studio-indigo">DİJİTAL DENEYİMLER</span> <br />
+              <span className="text-studio-primary">DİJİTAL DENEYİMLER</span> <br />
               ZANAAT EDİYORUZ.
             </motion.h2>
 
@@ -61,7 +61,7 @@ export const About: React.FC = () => {
                 transition={{ delay: 0.4 + (idx * 0.1) }}
                 className="space-y-4 group"
               >
-                <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-studio-indigo group-hover:bg-studio-indigo group-hover:text-white transition-all">
+                <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-studio-primary group-hover:bg-studio-primary group-hover:text-white transition-all">
                   <feature.icon size={24} />
                 </div>
                 <h4 className="text-lg font-bold uppercase tracking-tight">{feature.title}</h4>

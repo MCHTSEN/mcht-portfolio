@@ -4,7 +4,7 @@ import React from 'react';
 
 export const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-48 bg-white overflow-hidden">
+    <section id="contact" className="py-48 bg-transparent overflow-hidden">
       <div className="max-w-[1800px] mx-auto px-6">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
@@ -16,7 +16,7 @@ export const Contact: React.FC = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="inline-flex items-center gap-2 px-3 py-1 bg-studio-indigo/5 text-studio-indigo rounded-full"
+                className="inline-flex items-center gap-2 px-3 py-1 bg-studio-primary/5 text-studio-primary rounded-full"
               >
                 <MessageSquare size={12} fill="currentColor" />
                 <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em]">İletişim Hattı</span>
@@ -27,7 +27,7 @@ export const Contact: React.FC = () => {
                 viewport={{ once: true }}
                 className="text-6xl md:text-9xl font-bold tracking-tighter leading-[0.85] uppercase"
               >
-                HADİ<br /><span className="text-studio-indigo">BAŞLAYALIM.</span>
+                HADİ<br /><span className="text-studio-primary">BAŞLAYALIM.</span>
               </motion.h2>
             </div>
             
@@ -36,20 +36,20 @@ export const Contact: React.FC = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-xl md:text-2xl text-studio-gray font-medium max-w-md leading-relaxed tracking-tight border-l-2 border-studio-indigo pl-8"
+              className="text-xl md:text-2xl text-studio-gray font-medium max-w-md leading-relaxed tracking-tight border-l-2 border-studio-primary pl-8"
             >
               Yeni bir projeye mi başlıyorsunuz? Teknik partneriniz olmaya hazırız. Hemen iletişime geçin.
             </motion.p>
  
             <div className="flex items-center gap-6 pt-8">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-studio-indigo rounded-full blur-xl opacity-20 animate-pulse"></div>
+                  <div className="absolute inset-0 bg-studio-primary rounded-full blur-xl opacity-20 animate-pulse"></div>
                   <div className="w-16 h-16 bg-studio-text rounded-2xl flex items-center justify-center text-white relative z-10 border border-white/20">
                     <MapPin size={24} />
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-studio-indigo">Konum</span>
+                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-studio-primary">Konum</span>
                   <span className="text-lg font-bold text-studio-text">İstanbul & Bursa, TR</span>
                 </div>
             </div>
@@ -65,7 +65,7 @@ export const Contact: React.FC = () => {
                   label: "E-Posta", 
                   value: "hello@lukeristudio.com", 
                   href: "mailto:hello@lukeristudio.com",
-                  color: "bg-studio-indigo"
+                  color: "bg-studio-primary"
                 },
                 { 
                   icon: Linkedin, 
@@ -86,7 +86,7 @@ export const Contact: React.FC = () => {
                   label: "Telefon", 
                   value: "Tıkla & Ara", 
                   href: "tel:+905050161116",
-                  color: "bg-studio-cyan" 
+                  color: "bg-studio-primary" 
                 }
               ].map((item, idx) => (
                 <motion.a 
@@ -99,16 +99,16 @@ export const Contact: React.FC = () => {
                   href={item.href} 
                   target={item.href.startsWith('http') ? "_blank" : undefined}
                   rel={item.href.startsWith('http') ? "noopener noreferrer" : undefined}
-                  className="group bg-[#fcfcfc] border border-studio-border p-10 flex flex-col justify-between aspect-square rounded-2xl hover:border-studio-indigo transition-all duration-500"
+                  className="group bg-[#fcfcfc] border border-studio-border p-10 flex flex-col justify-between aspect-square rounded-2xl hover:border-studio-primary transition-all duration-500"
                 >
                   <div className="flex justify-between items-start">
                     <div className={`w-14 h-14 ${item.color} text-white rounded-2xl flex items-center justify-center shadow-lg transform transition-transform group-hover:rotate-6 group-hover:scale-110`}>
                       <item.icon size={28} strokeWidth={1.5} />
                     </div>
-                    <ArrowUpRight size={20} className="text-studio-indigo opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                    <ArrowUpRight size={20} className="text-studio-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                   </div>
                   <div className="space-y-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-studio-indigo transition-colors">{item.label}</span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-studio-primary transition-colors">{item.label}</span>
                     <p className="text-lg font-bold text-studio-text">{item.value}</p>
                   </div>
                 </motion.a>

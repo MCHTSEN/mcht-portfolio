@@ -49,7 +49,7 @@ const items = [
 
 export const Highlights: React.FC = () => {
   return (
-    <section id="highlights" className="py-40 bg-white relative overflow-hidden">
+    <section id="highlights" className="py-40 bg-transparent relative overflow-hidden">
       <div className="max-w-[1800px] mx-auto px-6">
         
         {/* Header Section */}
@@ -59,7 +59,7 @@ export const Highlights: React.FC = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-studio-indigo/5 text-studio-indigo rounded-full"
+              className="inline-flex items-center gap-2 px-3 py-1 bg-studio-primary/5 text-studio-primary rounded-full"
             >
               <Sparkle size={12} fill="currentColor" />
               <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em]">Kapasitemiz</span>
@@ -71,7 +71,7 @@ export const Highlights: React.FC = () => {
               className="text-5xl md:text-8xl font-bold tracking-tighter leading-[0.9] uppercase"
             >
               TEKNİK<br />
-              <span className="text-studio-indigo">MÜKEMMELİYET.</span>
+              <span className="text-studio-primary">MÜKEMMELİYET.</span>
             </motion.h2>
           </div>
           <motion.div 
@@ -99,10 +99,10 @@ export const Highlights: React.FC = () => {
             >
               <div className="relative z-10 flex flex-col h-full space-y-10">
                 <div className="flex justify-between items-start">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-studio-cyan underline decoration-studio-indigo decoration-2 underline-offset-4">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-studio-primary underline decoration-studio-primary decoration-2 underline-offset-4">
                     {item.category}
                   </span>
-                  <div className="w-10 h-10 border border-studio-border group-hover:border-white/20 rounded-full flex items-center justify-center transition-all duration-500 group-hover:bg-studio-indigo">
+                  <div className="w-10 h-10 border border-studio-border group-hover:border-white/20 rounded-full flex items-center justify-center transition-all duration-500 group-hover:bg-studio-primary">
                     <Plus size={18} className="group-hover:rotate-90 transition-transform duration-500" />
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export const Highlights: React.FC = () => {
               </div>
               
               {/* Background gradient on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-studio-indigo/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-studio-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             </motion.div>
           ))}
         </div>

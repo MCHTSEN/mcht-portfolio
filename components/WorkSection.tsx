@@ -41,7 +41,7 @@ export const WorkSection: React.FC = () => {
 
   return (
     <>
-      <section id="work" className="py-48 bg-[#fafafa]">
+      <section id="work" className="py-48 bg-transparent">
         <div className="max-w-[1800px] mx-auto px-6">
           
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-40">
@@ -50,7 +50,7 @@ export const WorkSection: React.FC = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="inline-flex items-center gap-2 px-3 py-1 bg-studio-indigo/5 text-studio-indigo rounded-sm border border-studio-indigo/10"
+                className="inline-flex items-center gap-2 px-3 py-1 bg-studio-primary/5 text-studio-primary rounded-sm border border-studio-primary/10"
               >
                 <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em]">Seçilmiş Projeler</span>
               </motion.div>
@@ -60,7 +60,7 @@ export const WorkSection: React.FC = () => {
                 viewport={{ once: true }}
                 className="text-6xl md:text-9xl font-bold tracking-tighter leading-[0.85] uppercase"
               >
-                PROJE<br /><span className="text-studio-indigo">ARŞİVİ.</span>
+                PROJE<br /><span className="text-studio-primary">ARŞİVİ.</span>
               </motion.h2>
             </div>
             <motion.div 
@@ -69,7 +69,7 @@ export const WorkSection: React.FC = () => {
               viewport={{ once: true }}
               className="max-w-sm lg:pb-6"
             >
-              <p className="text-studio-gray font-medium text-lg leading-relaxed border-l-2 border-studio-indigo pl-6">
+              <p className="text-studio-gray font-medium text-lg leading-relaxed border-l-2 border-studio-primary pl-6">
                 Mobil dünya için yüksek performanslı, ödüllü ve ölçeklenebilir dijital deneyimler geliştiriyoruz.
               </p>
             </motion.div>
@@ -91,22 +91,22 @@ export const WorkSection: React.FC = () => {
                   {/* Left Column: Info */}
                   <div className="lg:col-span-5 space-y-12 lg:sticky lg:top-48">
                     <div className="flex items-center gap-4">
-                      <span className={`text-[10px] font-mono font-bold uppercase tracking-widest leading-none px-4 py-2 border border-studio-border rounded-full group-hover:bg-studio-indigo group-hover:text-white group-hover:border-transparent transition-all`}>
+                      <span className={`text-[10px] font-mono font-bold uppercase tracking-widest leading-none px-4 py-2 border border-studio-border rounded-full group-hover:bg-studio-primary group-hover:text-white group-hover:border-transparent transition-all`}>
                         {projectTypeMap[project.type] || project.type}
                       </span>
                       {project.hasAward && (
-                        <div className="flex items-center gap-2 text-[10px] font-mono font-bold text-studio-indigo uppercase tracking-widest leading-none bg-studio-indigo/5 px-4 py-2 rounded-full border border-studio-indigo/20">
+                        <div className="flex items-center gap-2 text-[10px] font-mono font-bold text-studio-primary uppercase tracking-widest leading-none bg-studio-primary/5 px-4 py-2 rounded-full border border-studio-primary/20">
                            AWARD WINNER
                         </div>
                       )}
                     </div>
 
                     <div className="space-y-6">
-                       <h3 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight uppercase relative inline-block group-hover:text-studio-indigo transition-colors duration-500">
+                       <h3 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight uppercase relative inline-block group-hover:text-studio-primary transition-colors duration-500">
                         {project.title}
                       </h3>
                       <div className="flex items-center gap-3">
-                        <div className="h-[2px] w-12 bg-studio-indigo scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                        <div className="h-[2px] w-12 bg-studio-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
                         <p className="text-lg font-mono tracking-tighter font-bold text-studio-text">
                           {project.subtitle}
                         </p>
@@ -130,7 +130,7 @@ export const WorkSection: React.FC = () => {
                          <span className="relative z-10 flex items-center gap-3">
                             PROJEYİ KEŞFET <ExternalLink size={14} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                          </span>
-                         <div className="absolute inset-0 bg-studio-indigo translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
+                         <div className="absolute inset-0 bg-studio-primary translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
                        </button>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ export const WorkSection: React.FC = () => {
                     <motion.div 
                       whileHover={{ scale: 0.98 }}
                       transition={{ duration: 0.5 }}
-                      className={`relative overflow-hidden aspect-[16/10] ${project.secondaryColor} rounded-2xl border border-studio-border/20 group-hover:shadow-2xl group-hover:shadow-studio-indigo/5 transition-all duration-700 flex items-center justify-center p-12 overflow-hidden`}
+                      className={`relative overflow-hidden aspect-[16/10] ${project.secondaryColor} rounded-2xl border border-studio-border/20 group-hover:shadow-2xl group-hover:shadow-studio-primary/5 transition-all duration-700 flex items-center justify-center p-12 overflow-hidden`}
                     >
                        <div className="absolute inset-0 bg-gradient-to-tr from-black/5 to-transparent"></div>
                        

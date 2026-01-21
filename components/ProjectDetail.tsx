@@ -53,7 +53,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
   };
 
   return (
-    <div className="fixed inset-0 z-[100] bg-white overflow-y-auto overflow-x-hidden selection:bg-studio-text selection:text-white">
+    <div className="fixed inset-0 z-[100] bg-studio-bg overflow-y-auto overflow-x-hidden selection:bg-studio-text selection:text-white">
       
       {/* Brand Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-[110] bg-white/90 backdrop-blur-md border-b border-studio-border/50`}>

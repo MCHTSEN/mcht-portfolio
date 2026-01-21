@@ -1,13 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --bg-primary: #fafafa;
-  --bg-secondary: #f4f4f5;
-  --text-primary: #101010;
-  --text-secondary: #475569;
-  --accent-primary: #0284c7; /* Sky Blue */
-  --accent-secondary: #06b6d4; /* Cyan */
-  --border-color: #e2e8f0;
+  /* Dynamic Color Theme System - Change these values to update the entire site */
+  
+  /* Backgrounds */
+  --bg-primary: 250 250 250;   /* #fafafa */
+  --bg-secondary: 244 244 245; /* #f4f4f5 */
+  
+  /* Text */
+  --text-primary: 16 16 16;    /* #101010 */
+  --text-secondary: 71 85 105; /* #475569 */
+  
+  /* Accents */
+  --accent-primary: 0 0 128;     /* Navy Blue #000080 */
+  --accent-secondary: 6 182 212; /* Cyan */
+  
+  /* Borders & UI Details */
+  --border-color: 226 232 240;   /* #e2e8f0 */
+  --bg-silver: 241 245 249;      /* #f1f5f9 */
+
+  /* Fonts */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'Fragment Mono', 'SF Mono', 'Fira Code', monospace;
 }

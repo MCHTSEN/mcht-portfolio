@@ -50,14 +50,21 @@ export const Hero: React.FC = () => {
             DİJİTAL<br />
             <span className="text-studio-primary relative inline-block">
                GELECEĞİ
-               <motion.span 
-                 initial={{ width: 0 }}
-                 animate={{ width: '100%' }}
-                 transition={{ delay: 1, duration: 1 }}
-                 className="absolute -bottom-2 left-0 h-2 bg-studio-primary/30 -z-10"
-               ></motion.span>
             </span><br />
-            <span className="text-studio-gray/20">İNŞA EDİYORUZ.</span>
+            <span 
+              className="font-mono text-transparent bg-clip-text relative inline-block"
+              style={{
+                backgroundImage: `
+                  linear-gradient(to right, rgb(var(--bg-primary)) 2px, transparent 2px),
+                  linear-gradient(to bottom, rgb(var(--bg-primary)) 2px, transparent 2px)
+                `,
+                backgroundSize: '12px 12px',
+                backgroundColor: 'rgb(var(--text-primary))',
+                WebkitBackgroundClip: 'text'
+              }}
+            >
+              OLUŞTURUYORUZ.
+            </span>
           </motion.h1>
           
           <motion.div variants={itemVariants} className="flex flex-wrap gap-6 pt-4">

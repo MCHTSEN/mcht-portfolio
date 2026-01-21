@@ -1,87 +1,118 @@
-import { ArrowUpRight, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowUpRight, Github, Linkedin, Mail, MapPin, MessageSquare, Phone } from 'lucide-react';
 import React from 'react';
 
 export const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-40 bg-studio-bg/30">
+    <section id="contact" className="py-48 bg-white overflow-hidden">
       <div className="max-w-[1800px] mx-auto px-6">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
           
           {/* Header & Intent */}
-          <div className="lg:col-span-6 space-y-12">
-            <div className="space-y-6">
-              <span className="text-[10px] font-mono font-bold uppercase tracking-[0.4em] text-blue-600 bg-blue-50 px-3 py-1.5 inline-block">İletişim / İş Birliği</span>
-              <h2 className="text-6xl md:text-8xl font-bold tracking-tighter leading-none uppercase">
-                BİRLİKTE<br /><span className="text-blue-600">ÇALIŞALIM</span><br />MI?
-              </h2>
+          <div className="lg:col-span-6 space-y-16">
+            <div className="space-y-8">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="inline-flex items-center gap-2 px-3 py-1 bg-studio-indigo/5 text-studio-indigo rounded-full"
+              >
+                <MessageSquare size={12} fill="currentColor" />
+                <span className="text-[10px] font-mono font-bold uppercase tracking-[0.2em]">İletişim Hattı</span>
+              </motion.div>
+              <motion.h2 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-6xl md:text-9xl font-bold tracking-tighter leading-[0.85] uppercase"
+              >
+                HADİ<br /><span className="text-studio-indigo">BAŞLAYALIM.</span>
+              </motion.h2>
             </div>
             
-            <p className="text-xl md:text-2xl text-studio-gray font-medium max-w-md leading-snug tracking-tight">
-              2026 iş birlikleri için kapasite ayrıldı. Projenizin teknik gereksinimlerini değerlendirelim.
-            </p>
-
-            <div className="space-y-6 pt-12">
-               <div className="flex items-center gap-4 text-studio-text">
-                  <div className="w-12 h-12 bg-white border-2 border-studio-text flex items-center justify-center shadow-[4px_4px_0px_#2563eb]">
-                    <MapPin size={20} className="text-blue-600" />
+            <motion.p 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-xl md:text-2xl text-studio-gray font-medium max-w-md leading-relaxed tracking-tight border-l-2 border-studio-indigo pl-8"
+            >
+              Yeni bir projeye mi başlıyorsunuz? Teknik partneriniz olmaya hazırız. Hemen iletişime geçin.
+            </motion.p>
+ 
+            <div className="flex items-center gap-6 pt-8">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-studio-indigo rounded-full blur-xl opacity-20 animate-pulse"></div>
+                  <div className="w-16 h-16 bg-studio-text rounded-2xl flex items-center justify-center text-white relative z-10 border border-white/20">
+                    <MapPin size={24} />
                   </div>
-                  <span className="text-sm font-mono font-bold uppercase tracking-widest underline decoration-blue-600 underline-offset-4">İstanbul & Bursa</span>
-               </div>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-studio-indigo">Konum</span>
+                  <span className="text-lg font-bold text-studio-text">İstanbul & Bursa, TR</span>
+                </div>
             </div>
           </div>
 
           {/* Contact Methods */}
           <div className="lg:col-span-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px] bg-studio-text border-2 border-studio-text shadow-[16px_16px_0px_#e5e7eb]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               
-              {/* Email */}
-              <a href="mailto:hello@lukeristudio.com" className="group bg-white p-12 hover:bg-blue-600 hover:text-white transition-all duration-500 flex flex-col justify-between aspect-square">
-                 <div className="flex justify-between items-start">
-                    <Mail size={32} strokeWidth={1} />
-                    <ArrowUpRight size={24} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                 </div>
-                 <div className="space-y-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-white/70">E-Posta</span>
-                    <p className="text-lg font-bold">hello@lukeristudio.com</p>
-                 </div>
-              </a>
-
-              {/* LinkedIn */}
-              <a href="https://linkedin.com/in/mucahit-sen-a3933a184" target="_blank" rel="noopener noreferrer" className="group bg-white p-12 hover:bg-black hover:text-white transition-all duration-500 flex flex-col justify-between aspect-square">
-                 <div className="flex justify-between items-start">
-                    <Linkedin size={32} strokeWidth={1} />
-                    <ArrowUpRight size={24} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                 </div>
-                 <div className="space-y-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-white/70">LinkedIn</span>
-                    <p className="text-lg font-bold">LinkedIn</p>
-                 </div>
-              </a>
-
-              {/* GitHub */}
-              <a href="https://github.com/MCHTSEN" target="_blank" rel="noopener noreferrer" className="group bg-white p-12 hover:bg-black hover:text-white transition-all duration-500 flex flex-col justify-between aspect-square">
-                 <div className="flex justify-between items-start">
-                    <Github size={32} strokeWidth={1} />
-                    <ArrowUpRight size={24} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                 </div>
-                 <div className="space-y-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-white/70">Açık Kaynak</span>
-                    <p className="text-lg font-bold">GitHub</p>
-                 </div>
-              </a>
-
-              {/* Call */}
-              <a href="tel:+905050161116" className="group bg-blue-600 text-white p-12 transition-all duration-500 flex flex-col justify-between aspect-square">
-                 <div className="flex justify-between items-start">
-                    <Phone size={32} strokeWidth={1} />
-                    <ArrowUpRight size={24} className="opacity-40 group-hover:opacity-100 transition-opacity" />
-                 </div>
-                 <div className="space-y-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-white/50">Telefon</span>
-                    <p className="text-lg font-bold">Görüşme Planla</p>
-                 </div>
-              </a>
+              {[
+                { 
+                  icon: Mail, 
+                  label: "E-Posta", 
+                  value: "hello@lukeristudio.com", 
+                  href: "mailto:hello@lukeristudio.com",
+                  color: "bg-studio-indigo"
+                },
+                { 
+                  icon: Linkedin, 
+                  label: "LinkedIn", 
+                  value: "Lukeri Studio", 
+                  href: "https://linkedin.com/in/mucahit-sen-a3933a184",
+                  color: "bg-[#0A66C2]" 
+                },
+                { 
+                  icon: Github, 
+                  label: "Açık Kaynak", 
+                  value: "GitHub", 
+                  href: "https://github.com/MCHTSEN",
+                  color: "bg-black" 
+                },
+                { 
+                  icon: Phone, 
+                  label: "Telefon", 
+                  value: "Tıkla & Ara", 
+                  href: "tel:+905050161116",
+                  color: "bg-studio-cyan" 
+                }
+              ].map((item, idx) => (
+                <motion.a 
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  whileHover={{ y: -8 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  href={item.href} 
+                  target={item.href.startsWith('http') ? "_blank" : undefined}
+                  rel={item.href.startsWith('http') ? "noopener noreferrer" : undefined}
+                  className="group bg-[#fcfcfc] border border-studio-border p-10 flex flex-col justify-between aspect-square rounded-2xl hover:border-studio-indigo transition-all duration-500"
+                >
+                  <div className="flex justify-between items-start">
+                    <div className={`w-14 h-14 ${item.color} text-white rounded-2xl flex items-center justify-center shadow-lg transform transition-transform group-hover:rotate-6 group-hover:scale-110`}>
+                      <item.icon size={28} strokeWidth={1.5} />
+                    </div>
+                    <ArrowUpRight size={20} className="text-studio-indigo opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                  </div>
+                  <div className="space-y-2">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-studio-indigo transition-colors">{item.label}</span>
+                    <p className="text-lg font-bold text-studio-text">{item.value}</p>
+                  </div>
+                </motion.a>
+              ))}
 
             </div>
           </div>

@@ -1,4 +1,6 @@
+import { About } from './components/About';
 import { Contact } from './components/Contact';
+import { CustomCursor } from './components/CustomCursor';
 import { Hero } from './components/Hero';
 import { Highlights } from './components/Highlights';
 import { Navbar } from './components/Navbar';
@@ -6,12 +8,14 @@ import { WorkSection } from './components/WorkSection';
 
 function App() {
   return (
-    <div className="min-h-screen bg-studio-bg text-studio-text selection:bg-studio-text selection:text-white">
+    <div className="min-h-screen bg-studio-bg text-studio-text selection:bg-studio-indigo selection:text-white">
+      <CustomCursor />
       <Navbar />
       <main>
         <Hero />
         <Highlights />
         <WorkSection />
+        <About />
         <Contact />
       </main>
       

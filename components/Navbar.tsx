@@ -1,10 +1,12 @@
 import React from 'react';
+import { Github, Linkedin } from 'lucide-react';
 import { NavItem } from '../types';
 
 const navItems: NavItem[] = [
   { label: 'Highlights', href: '#highlights' },
   { label: 'Work', href: '#work' },
-  { label: 'LinkedIn', href: '#' },
+  { label: 'GitHub', href: 'https://github.com/MCHTSEN', external: true },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/mucahit-sen-a3933a184', external: true },
   { label: 'Get in touch', href: '#contact' },
 ];
 
@@ -13,12 +15,12 @@ export const Navbar: React.FC = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F9F9F9]/80 backdrop-blur-md transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-gray-200 overflow-hidden border border-gray-300">
-             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Avatar" className="w-full h-full object-cover grayscale" />
+          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden border border-gray-300 flex items-center justify-center text-white font-bold text-sm">
+             MS
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-sm leading-tight">Jonny Czar Portfolio 2024</span>
-            <span className="text-xs text-gray-500">Jonny Czar • "Keep it simple"</span>
+            <span className="font-bold text-sm leading-tight">Mucahit SEN Portfolio 2025</span>
+            <span className="text-xs text-gray-500">Flutter Developer | Istanbul & Bursa</span>
           </div>
         </div>
 
@@ -27,8 +29,12 @@ export const Navbar: React.FC = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-gray-600 hover:text-black transition-colors"
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noopener noreferrer' : undefined}
+              className="text-sm font-medium text-gray-600 hover:text-black transition-colors flex items-center gap-1"
             >
+              {item.label === 'GitHub' && <Github size={14} />}
+              {item.label === 'LinkedIn' && <Linkedin size={14} />}
               {item.label}
             </a>
           ))}

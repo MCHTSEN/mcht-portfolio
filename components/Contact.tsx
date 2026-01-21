@@ -91,25 +91,32 @@ export const Contact: React.FC = () => {
               ].map((item, idx) => (
                 <motion.a 
                   key={idx}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  whileHover={{ y: -8 }}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  whileHover={{ x: -10 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
                   href={item.href} 
                   target={item.href.startsWith('http') ? "_blank" : undefined}
                   rel={item.href.startsWith('http') ? "noopener noreferrer" : undefined}
-                  className="group bg-[#fcfcfc] border border-studio-border p-10 flex flex-col justify-between aspect-square rounded-2xl hover:border-studio-primary transition-all duration-500"
+                  className="group relative overflow-hidden bg-white/60 backdrop-blur-sm border border-studio-border p-6 rounded-xl hover:border-studio-primary/50 hover:shadow-lg hover:shadow-studio-primary/5 transition-all duration-300"
                 >
-                  <div className="flex justify-between items-start">
-                    <div className={`w-14 h-14 ${item.color} text-white rounded-2xl flex items-center justify-center shadow-lg transform transition-transform group-hover:rotate-6 group-hover:scale-110`}>
-                      <item.icon size={28} strokeWidth={1.5} />
+                  <div className="absolute inset-0 bg-gradient-to-r from-studio-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  <div className="relative z-10 flex items-center justify-between">
+                    <div className="flex items-center gap-5">
+                      <div className={`w-12 h-12 ${item.color} text-white rounded-lg flex items-center justify-center shadow-md transform transition-transform group-hover:scale-110 group-hover:rotate-3`}>
+                        <item.icon size={20} strokeWidth={1.5} />
+                      </div>
+                      <div className="space-y-1">
+                        <span className="text-[9px] font-mono font-bold uppercase tracking-widest text-studio-gray block">{item.label}</span>
+                        <p className="text-base font-bold text-studio-text group-hover:text-studio-primary transition-colors">{item.value}</p>
+                      </div>
                     </div>
-                    <ArrowUpRight size={20} className="text-studio-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
-                  </div>
-                  <div className="space-y-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-studio-primary transition-colors">{item.label}</span>
-                    <p className="text-lg font-bold text-studio-text">{item.value}</p>
+                    
+                    <div className="w-8 h-8 rounded-full border border-studio-border flex items-center justify-center group-hover:bg-studio-primary group-hover:border-studio-primary group-hover:text-white transition-all">
+                      <ArrowUpRight size={14} className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </div>
                   </div>
                 </motion.a>
               ))}

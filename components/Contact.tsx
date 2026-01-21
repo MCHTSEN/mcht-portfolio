@@ -36,14 +36,14 @@ export const Contact: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px] bg-studio-text border-2 border-studio-text shadow-[16px_16px_0px_#e5e7eb]">
               
               {/* Email */}
-              <a href="mailto:mchtsenn16@gmail.com" className="group bg-white p-12 hover:bg-blue-600 hover:text-white transition-all duration-500 flex flex-col justify-between aspect-square">
+              <a href="mailto:hello@lukeristudio.com" className="group bg-white p-12 hover:bg-blue-600 hover:text-white transition-all duration-500 flex flex-col justify-between aspect-square">
                  <div className="flex justify-between items-start">
                     <Mail size={32} strokeWidth={1} />
                     <ArrowUpRight size={24} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                  </div>
                  <div className="space-y-2">
                     <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-studio-gray group-hover:text-white/70">E-Posta</span>
-                    <p className="text-lg font-bold">mchtsenn116@gmail.com</p>
+                    <p className="text-lg font-bold">hello@lukeristudio.com</p>
                  </div>
               </a>
 

@@ -130,14 +130,14 @@ export const WorkSection: React.FC = () => {
             </div>
 
             {/* App Screenshots */}
-            <div className="flex justify-center gap-2 md:gap-3 mb-8">
-              <div className="w-20 md:w-28 rounded-xl md:rounded-2xl overflow-hidden shadow-xl border-2 border-white/30 transform -rotate-6" style={{ aspectRatio: '1284/2778' }}>
+            <div className="flex justify-center gap-3 md:gap-4 mb-8">
+              <div className="w-28 md:w-40 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 transform -rotate-6" style={{ aspectRatio: '1284/2778' }}>
                 <img src="/assets/project-screenshots/catchpad/screenshot-1.jpg" alt="CatchPad Screen 1" className="w-full h-full object-cover" />
               </div>
-              <div className="w-20 md:w-28 rounded-xl md:rounded-2xl overflow-hidden shadow-xl border-2 border-white/30 transform rotate-3" style={{ aspectRatio: '1284/2778' }}>
+              <div className="w-28 md:w-40 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 transform rotate-3" style={{ aspectRatio: '1284/2778' }}>
                 <img src="/assets/project-screenshots/catchpad/screenshot-2.jpg" alt="CatchPad Screen 2" className="w-full h-full object-cover" />
               </div>
-              <div className="w-20 md:w-28 rounded-xl md:rounded-2xl overflow-hidden shadow-xl border-2 border-white/30 transform -rotate-3 hidden sm:block" style={{ aspectRatio: '1284/2778' }}>
+              <div className="w-28 md:w-40 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 transform -rotate-3 hidden sm:block" style={{ aspectRatio: '1284/2778' }}>
                 <img src="/assets/project-screenshots/catchpad/screenshot-3.jpg" alt="CatchPad Screen 3" className="w-full h-full object-cover" />
               </div>
             </div>
@@ -315,24 +315,24 @@ export const WorkSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Screenshots - Fixed sizing with proper aspect ratio */}
-            <div className="flex-1 flex justify-center items-center gap-2 md:gap-3">
+            {/* Screenshots - Fixed sizing with proper aspect ratio (same as Piqup) */}
+            <div className="flex-1 flex justify-center items-center gap-3 md:gap-4">
               {/* Cover image - 6.png */}
-              <div className="w-24 md:w-36 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 transform -rotate-6" style={{ aspectRatio: '1284/2778' }}>
+              <div className="w-28 md:w-40 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 transform -rotate-6" style={{ aspectRatio: '1284/2778' }}>
                 <img
                   src="/assets/project-screenshots/inner-kid/6.png"
                   alt="Inner Kid App Cover"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="w-24 md:w-36 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 transform rotate-3 mt-6 md:mt-8" style={{ aspectRatio: '1284/2778' }}>
+              <div className="w-28 md:w-40 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 transform rotate-3 mt-6 md:mt-8" style={{ aspectRatio: '1284/2778' }}>
                 <img
                   src="/assets/project-screenshots/inner-kid/3.jpg"
                   alt="Inner Kid App Screen 1"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="w-24 md:w-36 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 transform -rotate-3 hidden md:block" style={{ aspectRatio: '1284/2778' }}>
+              <div className="w-28 md:w-40 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 transform -rotate-3 hidden md:block" style={{ aspectRatio: '1284/2778' }}>
                 <img
                   src="/assets/project-screenshots/inner-kid/11.jpg"
                   alt="Inner Kid App Screen 2"
@@ -403,14 +403,14 @@ export const WorkSection: React.FC = () => {
               </p>
 
               {/* Screenshots */}
-              <div className="flex gap-2 mb-6">
-                <div className="w-16 md:w-20 rounded-lg md:rounded-xl overflow-hidden border-2 border-white/30" style={{ aspectRatio: '1284/2778' }}>
+              <div className="flex gap-2 md:gap-3 mb-6">
+                <div className="w-20 md:w-24 rounded-xl md:rounded-2xl overflow-hidden border-2 border-white/30 shadow-lg" style={{ aspectRatio: '1284/2778' }}>
                   <img src="/assets/project-screenshots/tamir-kolay/screenshot-1.png" alt="Tamir Kolay Screen 1" className="w-full h-full object-cover" />
                 </div>
-                <div className="w-16 md:w-20 rounded-lg md:rounded-xl overflow-hidden border-2 border-white/30" style={{ aspectRatio: '1284/2778' }}>
+                <div className="w-20 md:w-24 rounded-xl md:rounded-2xl overflow-hidden border-2 border-white/30 shadow-lg" style={{ aspectRatio: '1284/2778' }}>
                   <img src="/assets/project-screenshots/tamir-kolay/screenshot-2.png" alt="Tamir Kolay Screen 2" className="w-full h-full object-cover" />
                 </div>
-                <div className="w-16 md:w-20 rounded-lg md:rounded-xl overflow-hidden border-2 border-white/30 hidden sm:block" style={{ aspectRatio: '1284/2778' }}>
+                <div className="w-20 md:w-24 rounded-xl md:rounded-2xl overflow-hidden border-2 border-white/30 shadow-lg hidden sm:block" style={{ aspectRatio: '1284/2778' }}>
                   <img src="/assets/project-screenshots/tamir-kolay/screenshot-3.png" alt="Tamir Kolay Screen 3" className="w-full h-full object-cover" />
                 </div>
               </div>

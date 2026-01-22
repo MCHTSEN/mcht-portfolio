@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Prevent CLS from font loading */
 html {
@@ -234,17 +236,16 @@ img {
   width: max-content;
 }
 
-/* Cursor Blur Effect */
+/* Cursor Blur Effect - Optimized size */
 .cursor-glow {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(2, 132, 199, 0.15) 0%, rgba(2, 132, 199, 0) 70%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(2, 132, 199, 0.12) 0%, rgba(2, 132, 199, 0) 70%);
   position: fixed;
   border-radius: 50%;
   pointer-events: none;
   z-index: -1;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s;
+  transform: translate(-50%, -50%) translateZ(0);
   will-change: transform;
   contain: strict;
 }
@@ -286,4 +287,71 @@ img {
 .hover-reveal:hover::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+/* Hide main navbar when project detail is open */
+body.project-detail-open .main-navbar {
+  display: none !important;
+}
+
+/* GPU-accelerated background animations */
+@keyframes aura-1 {
+  0%, 100% {
+    transform: translateZ(0) scale(1) translate(0, 0);
+  }
+  50% {
+    transform: translateZ(0) scale(1.1) translate(50px, 25px);
+  }
+}
+
+@keyframes aura-2 {
+  0%, 100% {
+    transform: translateZ(0) scale(1.1) translate(0, 0);
+  }
+  50% {
+    transform: translateZ(0) scale(1) translate(-50px, 40px);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-aura-1 {
+  animation: aura-1 25s ease-in-out infinite;
+}
+
+.animate-aura-2 {
+  animation: aura-2 30s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+/* Disable background animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-aura-1,
+  .animate-aura-2,
+  .animate-pulse-slow {
+    animation: none !important;
+  }
+}
+
+/* Hero grid text effect - only on desktop */
+@media (min-width: 768px) {
+  .hero-grid-text {
+    background-image:
+      linear-gradient(to right, rgb(var(--bg-primary)) 2px, transparent 2px),
+      linear-gradient(to bottom, rgb(var(--bg-primary)) 2px, transparent 2px);
+    background-size: 8px 8px;
+    background-color: rgb(var(--text-primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
 }

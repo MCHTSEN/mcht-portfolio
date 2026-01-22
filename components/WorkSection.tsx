@@ -23,11 +23,13 @@ export const WorkSection: React.FC = () => {
   const openProject = (projectId: string) => {
     setSelectedProject(projectId);
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('project-detail-open');
   };
 
   const closeProject = () => {
     setSelectedProject(null);
     document.body.style.overflow = 'auto';
+    document.body.classList.remove('project-detail-open');
   };
 
   const selectedProjectData = selectedProject ? getProjectById(selectedProject) : null;

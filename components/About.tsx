@@ -65,7 +65,7 @@ export const About: React.FC = () => {
                 <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-studio-primary group-hover:bg-studio-primary group-hover:text-white transition-all">
                   <feature.icon size={24} />
                 </div>
-                <h4 className="text-lg font-bold uppercase tracking-tight">{feature.title}</h4>
+                <h3 className="text-lg font-bold uppercase tracking-tight">{feature.title}</h3>
                 <p className="text-white/40 text-sm leading-relaxed">{feature.desc}</p>
               </motion.div>
             ))}

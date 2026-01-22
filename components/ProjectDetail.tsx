@@ -59,10 +59,17 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
       <nav className={`fixed top-0 left-0 right-0 z-[110] bg-white/90 backdrop-blur-md border-b border-studio-border/50`}>
         <div className="max-w-[1800px] mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <span className={`text-[10px] font-mono font-bold uppercase tracking-widest px-3 py-1.5 ${project.brandColor} ${project.brandTextColor}`}>
+            <button
+              onClick={onClose}
+              className={`group flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] transition-all hover:gap-4 ${project.brandColor} ${project.brandTextColor} px-4 py-2.5`}
+            >
+              <ChevronLeft size={18} className="transition-transform group-hover:-translate-x-1" />
+              <span>Geri Dön</span>
+            </button>
+            <span className={`text-[10px] font-mono font-bold uppercase tracking-widest px-3 py-1.5 border border-studio-border hidden md:block`}>
               {projectTypeMap[project.type] || project.type}
             </span>
-            <span className="text-xs font-mono font-bold text-studio-gray uppercase tracking-widest hidden md:block">Referans No: {project.id}</span>
+            <span className="text-xs font-mono font-bold text-studio-gray uppercase tracking-widest hidden lg:block">Ref: {project.id}</span>
           </div>
           
           <button 

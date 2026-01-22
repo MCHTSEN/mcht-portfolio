@@ -46,23 +46,12 @@ export const Hero: React.FC = () => {
             <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-studio-primary">Projeleriniz İçin Hazırız</span>
           </motion.div>
           
-          <motion.h1 variants={itemVariants} className="text-6xl md:text-8xl xl:text-[140px] font-bold tracking-tighter leading-[0.8] text-studio-text uppercase">
+          <motion.h1 variants={itemVariants} className="text-4xl sm:text-6xl md:text-8xl xl:text-[140px] font-bold tracking-tighter leading-[0.85] text-studio-text uppercase">
             DİJİTAL<br />
             <span className="text-studio-primary relative inline-block">
                GELECEĞİ
             </span><br />
-            <span 
-              className="font-mono text-transparent bg-clip-text relative inline-block"
-              style={{
-                backgroundImage: `
-                  linear-gradient(to right, rgb(var(--bg-primary)) 2px, transparent 2px),
-                  linear-gradient(to bottom, rgb(var(--bg-primary)) 2px, transparent 2px)
-                `,
-                backgroundSize: '12px 12px',
-                backgroundColor: 'rgb(var(--text-primary))',
-                WebkitBackgroundClip: 'text'
-              }}
-            >
+            <span className="font-mono text-studio-text md:text-transparent md:bg-clip-text relative inline-block text-3xl sm:text-5xl md:text-7xl xl:text-[120px] hero-grid-text">
               OLUŞTURUYORUZ.
             </span>
           </motion.h1>
@@ -85,7 +74,7 @@ export const Hero: React.FC = () => {
           <div className="space-y-6">
             <div className="flex items-center gap-3">
                <Sparkles size={16} className="text-studio-primary" />
-               <h3 className="text-xs font-mono font-bold uppercase tracking-[0.3em] text-studio-gray">KİMLİĞİMİZ</h3>
+               <h2 className="text-xs font-mono font-bold uppercase tracking-[0.3em] text-studio-gray">KİMLİĞİMİZ</h2>
             </div>
             <p className="text-xl md:text-2xl text-studio-text font-medium leading-tight tracking-tight max-w-sm">
               Fikirleri yüksek performanslı dijital ürünlere dönüştüren butik bir <span className="text-studio-primary">yazılım ve tasarım</span> stüdyosuyuz.

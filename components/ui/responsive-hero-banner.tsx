@@ -102,39 +102,40 @@ const ResponsiveHeroBanner: React.FC<ResponsiveHeroBannerProps> = ({
                             </a>
                         </div>
 
-                        <div className="mx-auto mt-32 max-w-7xl">
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/5 rounded-3xl overflow-hidden bg-white/[0.02] backdrop-blur-xl">
-                                {pillars.map((pillar, index) => (
-                                    <div 
-                                        key={index}
-                                        className={`group relative p-12 md:p-16 flex flex-col justify-between min-h-[400px] transition-all duration-700 hover:bg-white/[0.03] ${index < 2 ? 'md:border-r border-b md:border-b-0 border-white/5' : ''}`}
-                                    >
-                                        <div className="relative z-10">
-                                            <span className="text-5xl md:text-7xl font-bold tracking-tighter text-white/5 group-hover:text-studio-primary transition-colors duration-700">
-                                                {pillar.id}
-                                            </span>
-                                        </div>
-                                        
-                                        <div className="relative z-10 space-y-6">
-                                            <h3 className="text-xl md:text-2xl font-bold tracking-tighter text-white group-hover:translate-x-2 transition-transform duration-500">
-                                                {pillar.title}
-                                            </h3>
-                                            <p className="text-xs md:text-sm font-mono text-white/40 leading-relaxed uppercase tracking-widest">
-                                                {pillar.desc}
-                                            </p>
-                                        </div>
-
-                                        {/* Abstract Decorator */}
-                                        <div className="absolute top-1/2 right-12 -translate-y-1/2 w-48 h-48 bg-studio-primary/5 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-                                        
-                                        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-studio-primary/20 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
                     </div>
                 </div>
             </LampContainer>
+
+            <div className="relative z-20 mx-auto max-w-7xl px-6 pb-24 -mt-32">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/5 rounded-3xl overflow-hidden bg-white/[0.02] backdrop-blur-xl">
+                    {pillars.map((pillar, index) => (
+                        <div 
+                            key={index}
+                            className={`group relative p-12 md:p-16 flex flex-col justify-between min-h-[400px] transition-all duration-700 hover:bg-white/[0.03] ${index < 2 ? 'md:border-r border-b md:border-b-0 border-white/5' : ''}`}
+                        >
+                            <div className="relative z-10">
+                                <span className="text-5xl md:text-7xl font-bold tracking-tighter text-white/5 group-hover:text-studio-primary transition-colors duration-700">
+                                    {pillar.id}
+                                </span>
+                            </div>
+                            
+                            <div className="relative z-10 space-y-6">
+                                <h3 className="text-xl md:text-2xl font-bold tracking-tighter text-white group-hover:translate-x-2 transition-transform duration-500">
+                                    {pillar.title}
+                                </h3>
+                                <p className="text-xs md:text-sm font-mono text-white/40 leading-relaxed uppercase tracking-widest">
+                                    {pillar.desc}
+                                </p>
+                            </div>
+
+                            {/* Abstract Decorator */}
+                            <div className="absolute top-1/2 right-12 -translate-y-1/2 w-48 h-48 bg-studio-primary/5 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+                            
+                            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-studio-primary/20 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </section>
     );
 };

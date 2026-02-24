@@ -19,7 +19,7 @@ export const Hero: React.FC = () => {
             {/* Minimalist Marquee */}
             <div className="absolute bottom-10 left-0 right-0 py-10 border-y border-white/5 bg-black/20 backdrop-blur-sm overflow-hidden z-20">
                 <div className="flex items-center gap-12 animate-marquee whitespace-nowrap">
-                    {['YAYGIN ERİŞİM', 'MOBİL SİSTEMLER', 'BULUT MİMARİSİ', 'YAPAY ZEKA', 'DENEYİM TASARIMI', 'MARKA TEKNOLOJİSİ'].map((tag, i) => (
+                    {['50+ MUTLU MÜŞTERİ', 'BAŞARI GARANTİSİ', 'YATIRIMCI ONAYLI ALTYAPI', 'ÖDÜLLÜ UI/UX TASARIM', 'UÇTAN UCA TESLİMAT', 'GLOBAL REFERANSLAR'].map((tag, i) => (
                         <React.Fragment key={i}>
                             <span className="text-[10px] font-mono font-bold uppercase tracking-[0.4em] text-white/40 flex items-center gap-4">
                                 <span className="w-2 h-2 rounded-full bg-studio-primary opacity-50" />
@@ -27,8 +27,8 @@ export const Hero: React.FC = () => {
                             </span>
                         </React.Fragment>
                     ))}
-                    {['YAYGIN ERİŞİM', 'MOBİL SİSTEMLER', 'BULUT MİMARİSİ', 'YAPAY ZEKA', 'DENEYİM TASARIMI', 'MARKA TEKNOLOJİSİ'].map((tag, i) => (
-                        <React.Fragment key={i}>
+                    {['50+ MUTLU MÜŞTERİ', 'BAŞARI GARANTİSİ', 'YATIRIMCI ONAYLI ALTYAPI', 'ÖDÜLLÜ UI/UX TASARIM', 'UÇTAN UCA TESLİMAT', 'GLOBAL REFERANSLAR'].map((tag, i) => (
+                        <React.Fragment key={i + 10}>
                             <span className="text-[10px] font-mono font-bold uppercase tracking-[0.4em] text-white/40 flex items-center gap-4">
                                 <span className="w-2 h-2 rounded-full bg-studio-primary opacity-50" />
                                 {tag}

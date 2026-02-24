@@ -3,8 +3,9 @@ import { BackgroundEffect } from './components/BackgroundEffect';
 import { Contact } from './components/Contact';
 import { CustomCursor } from './components/CustomCursor';
 import { Hero } from './components/Hero';
-import { Highlights } from './components/Highlights';
 import { Navbar } from './components/Navbar';
+import { PainAndRelief } from './components/PainAndRelief';
+import { TestimonialsSection } from './components/TestimonialsSection';
 import { WorkSection } from './components/WorkSection';
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
       <Navbar />
       <main id="main-content" className="relative z-10" role="main">
         <Hero />
-        <Highlights />
+        <PainAndRelief />
+        <TestimonialsSection />
         <WorkSection />
         <About />
         <Contact />

@@ -96,7 +96,7 @@ export const Highlights: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="group p-4 md:p-12 border-r border-b border-studio-border hover:bg-studio-text hover:text-white transition-all duration-700 relative overflow-hidden cursor-pointer"
+              className="group p-4 md:p-12 border-r border-b border-studio-border hover:bg-white/5 transition-all duration-700 relative overflow-hidden cursor-pointer"
             >
               <div className="relative z-10 flex flex-col h-full space-y-3 md:space-y-10">
                 <div className="flex justify-between items-start">

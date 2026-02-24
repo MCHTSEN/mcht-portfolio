@@ -4,7 +4,7 @@ import React from 'react';
 
 export const About: React.FC = () => {
   return (
-    <section id="about" aria-labelledby="about-heading" className="py-48 bg-studio-text text-white overflow-hidden relative">
+    <section id="about" aria-labelledby="about-heading" className="py-48 bg-transparent text-white overflow-hidden relative">
       {/* Decorative background text */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-bold opacity-[0.02] whitespace-nowrap pointer-events-none uppercase tracking-tighter">
         Digital Craftsmanship

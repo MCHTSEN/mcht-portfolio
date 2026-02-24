@@ -45,7 +45,7 @@ export const Contact: React.FC = () => {
             <div className="flex items-center gap-6 pt-8">
                 <div className="relative">
                   <div className="absolute inset-0 bg-studio-primary rounded-full blur-xl opacity-20 animate-pulse"></div>
-                  <div className="w-16 h-16 bg-studio-text rounded-2xl flex items-center justify-center text-white relative z-10 border border-white/20">
+                  <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-white relative z-10 border border-white/10">
                     <MapPin size={24} />
                   </div>
                 </div>
@@ -100,7 +100,7 @@ export const Contact: React.FC = () => {
                   href={item.href} 
                   target={item.href.startsWith('http') ? "_blank" : undefined}
                   rel={item.href.startsWith('http') ? "noopener noreferrer" : undefined}
-                  className="group relative overflow-hidden bg-white/60 backdrop-blur-sm border border-studio-border p-6 rounded-xl hover:border-studio-primary/50 hover:shadow-lg hover:shadow-studio-primary/5 transition-all duration-300"
+                  className="group relative overflow-hidden bg-white/5 backdrop-blur-sm border border-studio-border p-6 rounded-xl hover:border-studio-primary/50 hover:shadow-lg hover:shadow-studio-primary/5 transition-all duration-300"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-studio-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   

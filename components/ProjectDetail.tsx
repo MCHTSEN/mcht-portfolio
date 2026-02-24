@@ -53,10 +53,10 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
   };
 
   return (
-    <div className="fixed inset-0 z-[100] bg-studio-bg overflow-y-auto overflow-x-hidden selection:bg-studio-text selection:text-white">
+    <div className="fixed inset-0 z-[100] bg-studio-bg overflow-y-auto overflow-x-hidden selection:bg-studio-primary selection:text-white">
       
       {/* Brand Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-[110] bg-white/90 backdrop-blur-md border-b border-studio-border/50`}>
+      <nav className={`fixed top-0 left-0 right-0 z-[110] bg-black/80 backdrop-blur-md border-b border-studio-border/50`}>
         <div className="max-w-[1800px] mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
@@ -132,7 +132,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
               <div className="flex items-center justify-center gap-4 md:gap-12 relative">
                 
                 {/* Left Screen */}
-                <div className={`hidden lg:block opacity-40 transform -rotate-12 scale-75 transition-all duration-1000 overflow-hidden border-8 border-studio-text bg-white ${project.isDesktop ? 'w-[500px] aspect-video rounded-3xl' : 'w-72 aspect-[9/19] rounded-[2.5rem]'}`}>
+                <div className={`hidden lg:block opacity-40 transform -rotate-12 scale-75 transition-all duration-1000 overflow-hidden border-8 border-studio-border bg-zinc-900 ${project.isDesktop ? 'w-[500px] aspect-video rounded-3xl' : 'w-72 aspect-[9/19] rounded-[2.5rem]'}`}>
                    <img
                     src={project.screenshots[(currentImageIndex - 1 + project.screenshots.length) % project.screenshots.length]}
                     className="w-full h-full object-cover grayscale"
@@ -144,9 +144,9 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
                 </div>
 
                 {/* Main Focused Screen */}
-                <div className={`relative z-20 scale-100 transition-all duration-700 studio-shadow-lg bg-studio-text ${project.isDesktop ? 'w-full max-w-[900px] aspect-video rounded-3xl p-3' : 'w-full max-w-[340px] md:max-w-[400px] aspect-[9/19] rounded-[3rem] p-4'}`}>
-                  {!project.isDesktop && <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-studio-text rounded-b-3xl z-30"></div>}
-                  <div className={`w-full h-full overflow-hidden bg-white relative group ${project.isDesktop ? 'rounded-2xl' : 'rounded-[2.2rem]'}`}>
+                <div className={`relative z-20 scale-100 transition-all duration-700 studio-shadow-lg bg-studio-border ${project.isDesktop ? 'w-full max-w-[900px] aspect-video rounded-3xl p-3' : 'w-full max-w-[340px] md:max-w-[400px] aspect-[9/19] rounded-[3rem] p-4'}`}>
+                  {!project.isDesktop && <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-studio-border rounded-b-3xl z-30"></div>}
+                  <div className={`w-full h-full overflow-hidden bg-zinc-900 relative group ${project.isDesktop ? 'rounded-2xl' : 'rounded-[2.2rem]'}`}>
                     <img
                       src={project.screenshots[currentImageIndex]}
                       className="w-full h-full object-cover animate-in fade-in slide-in-from-bottom-4 duration-700"
@@ -169,7 +169,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
                 </div>
 
                 {/* Right Screen */}
-                <div className={`hidden lg:block opacity-40 transform rotate-12 scale-75 transition-all duration-1000 overflow-hidden border-8 border-studio-text bg-white ${project.isDesktop ? 'w-[500px] aspect-video rounded-3xl' : 'w-72 aspect-[9/19] rounded-[2.5rem]'}`}>
+                <div className={`hidden lg:block opacity-40 transform rotate-12 scale-75 transition-all duration-1000 overflow-hidden border-8 border-studio-border bg-zinc-900 ${project.isDesktop ? 'w-[500px] aspect-video rounded-3xl' : 'w-72 aspect-[9/19] rounded-[2.5rem]'}`}>
                   <img
                     src={project.screenshots[(currentImageIndex + 1) % project.screenshots.length]}
                     className="w-full h-full object-cover grayscale"
@@ -207,7 +207,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
                   <div className="text-2xl font-medium leading-relaxed tracking-tight text-studio-text">
                     {project.story}
                   </div>
-                  <div className={`p-10 ${project.secondaryColor} border-l-4 border-studio-text flex flex-col justify-between`}>
+                  <div className={`p-10 ${project.secondaryColor} border-l-4 border-studio-border flex flex-col justify-between`}>
                      <p className="text-studio-gray text-lg italic leading-relaxed">"{project.description}"</p>
                      <div className="pt-8 flex items-center gap-3">
                         <div className={`w-2 h-2 rounded-full ${project.brandColor}`}></div>
@@ -270,7 +270,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
               </div>
 
               {(project.appStoreUrl || project.playStoreUrl || project.websiteUrl) && (
-                <div className="space-y-10 pt-10 border-t-2 border-studio-text">
+                <div className="space-y-10 pt-10 border-t-2 border-studio-border">
                    <h4 className="text-xs font-mono font-bold uppercase tracking-widest text-studio-gray">Dijital Erişim</h4>
                    <div className="space-y-4">
                     {project.appStoreUrl && (
@@ -279,7 +279,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onClose }
                       </a>
                     )}
                     {project.playStoreUrl && (
-                      <a href={project.playStoreUrl} target="_blank" rel="noopener noreferrer" className={`flex items-center justify-between p-5 border-2 border-studio-text font-bold text-xs uppercase tracking-widest hover:bg-studio-text hover:text-white transition-all shadow-[4px_4px_0px_#000] active:translate-x-1 active:translate-y-1 active:shadow-none`}>
+                      <a href={project.playStoreUrl} target="_blank" rel="noopener noreferrer" className={`flex items-center justify-between p-5 border-2 border-studio-border font-bold text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all shadow-[4px_4px_0px_rgba(255,255,255,0.1)] active:translate-x-1 active:translate-y-1 active:shadow-none`}>
                         Google Play <ArrowUpRight size={20} />
                       </a>
                     )}

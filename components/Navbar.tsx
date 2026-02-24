@@ -46,7 +46,7 @@ export const Navbar: React.FC = () => {
             <a href="/" className="flex items-center gap-3 group" aria-label="Lukeri Studio - Ana sayfa">
               <motion.div
                 whileHover={{ rotate: 90 }}
-                className="w-10 h-10 bg-studio-text flex items-center justify-center text-white font-mono text-xs font-bold rounded-xl"
+                className="w-10 h-10 bg-white flex items-center justify-center text-black font-mono text-xs font-bold rounded-xl"
               >
                 LS
               </motion.div>
@@ -79,7 +79,7 @@ export const Navbar: React.FC = () => {
                 <Linkedin size={18} strokeWidth={1.5} aria-hidden="true" />
               </a>
 
-              <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="ml-2 px-6 py-2.5 bg-studio-text text-white text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-studio-primary transition-all group flex items-center gap-2">
+              <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="ml-2 px-6 py-2.5 bg-white text-black text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-studio-primary hover:text-white transition-all group flex items-center gap-2">
                 Hadi Başlayalım
                 <MessageSquare size={12} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
               </button>

@@ -129,7 +129,7 @@ export const WorkSection: React.FC = () => {
                     </div>
 
                     <div className="pt-8">
-                       <button className="group/btn relative px-8 py-4 bg-studio-text text-white text-[10px] font-bold uppercase tracking-widest overflow-hidden transition-all rounded-sm flex items-center gap-3">
+                       <button className="group/btn relative px-8 py-4 bg-white text-black text-[10px] font-bold uppercase tracking-widest overflow-hidden transition-all rounded-sm flex items-center gap-3">
                          <span className="relative z-10 flex items-center gap-3">
                             PROJEYİ KEŞFET <ExternalLink size={14} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                          </span>
@@ -152,13 +152,13 @@ export const WorkSection: React.FC = () => {
                          <div className="relative w-full h-full flex items-center justify-center">
                             <motion.div 
                               whileHover={{ y: -10, x: -10 }}
-                              className="w-[80%] aspect-video bg-white border border-studio-border/30 rounded-lg shadow-xl overflow-hidden transform -translate-x-10 -translate-y-6 transition-transform duration-700 hover:z-20"
+                              className="w-[80%] aspect-video bg-zinc-900 border border-studio-border/30 rounded-lg shadow-xl overflow-hidden transform -translate-x-10 -translate-y-6 transition-transform duration-700 hover:z-20"
                             >
                               <img src={project.screenshots[0]} alt={`${project.title} ekran görüntüsü 1`} className="w-full h-full object-cover" width="800" height="450" loading="lazy" />
                             </motion.div>
                             <motion.div 
                               whileHover={{ y: 10, x: 10 }}
-                              className="absolute w-[80%] aspect-video bg-white border border-studio-border/30 rounded-lg shadow-2xl overflow-hidden transform translate-x-10 translate-y-6 transition-transform duration-700 z-10"
+                              className="absolute w-[80%] aspect-video bg-zinc-900 border border-studio-border/30 rounded-lg shadow-2xl overflow-hidden transform translate-x-10 translate-y-6 transition-transform duration-700 z-10"
                             >
                               <img src={project.screenshots[1]} alt={`${project.title} ekran görüntüsü 2`} className="w-full h-full object-cover" width="800" height="450" loading="lazy" />
                             </motion.div>
@@ -168,19 +168,19 @@ export const WorkSection: React.FC = () => {
                          <div className="relative w-full h-full flex items-center justify-center gap-8 md:gap-16">
                            <motion.div 
                              whileHover={{ y: -20, rotate: -2 }}
-                             className="w-32 md:w-44 aspect-[9/19] bg-white rounded-3xl border border-studio-border/30 shadow-xl overflow-hidden transform -rotate-6 translate-y-8 group-hover:translate-y-4 transition-transform duration-700"
+                             className="w-32 md:w-44 aspect-[9/19] bg-zinc-900 rounded-3xl border border-studio-border/30 shadow-xl overflow-hidden transform -rotate-6 translate-y-8 group-hover:translate-y-4 transition-transform duration-700"
                            >
                               <img src={project.screenshots[0]} alt={`${project.title} mobil ekran görüntüsü 1`} className="w-full h-full object-cover" width="270" height="585" loading="lazy" />
                            </motion.div>
                            <motion.div 
                              whileHover={{ y: -20, scale: 1.05 }}
-                             className="w-36 md:w-52 aspect-[9/19] bg-white rounded-[2rem] border border-studio-border/30 shadow-2xl overflow-hidden z-20 scale-110 transform translate-y-0 group-hover:-translate-y-4 transition-transform duration-700"
+                             className="w-36 md:w-52 aspect-[9/19] bg-zinc-900 rounded-[2rem] border border-studio-border/30 shadow-2xl overflow-hidden z-20 scale-110 transform translate-y-0 group-hover:-translate-y-4 transition-transform duration-700"
                            >
                               <img src={project.screenshots[1]} alt={`${project.title} mobil ekran görüntüsü 2`} className="w-full h-full object-cover" width="270" height="585" loading="lazy" />
                            </motion.div>
                            <motion.div 
                              whileHover={{ y: -20, rotate: 2 }}
-                             className="w-32 md:w-44 aspect-[9/19] bg-white rounded-3xl border border-studio-border/30 shadow-xl overflow-hidden transform rotate-6 translate-y-8 group-hover:translate-y-4 transition-transform duration-700"
+                             className="w-32 md:w-44 aspect-[9/19] bg-zinc-900 rounded-3xl border border-studio-border/30 shadow-xl overflow-hidden transform rotate-6 translate-y-8 group-hover:translate-y-4 transition-transform duration-700"
                            >
                               <img src={project.screenshots[2]} alt={`${project.title} mobil ekran görüntüsü 3`} className="w-full h-full object-cover" width="270" height="585" loading="lazy" />
                            </motion.div>

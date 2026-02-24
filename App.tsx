@@ -31,8 +31,8 @@ function App() {
       <footer role="contentinfo" aria-label="Site altbilgisi" className="py-20 px-6 max-w-[1800px] mx-auto studio-border-t">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
           <div className="space-y-4">
-             <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-studio-text flex items-center justify-center text-white font-mono text-xs font-bold transition-transform hover:rotate-90">LS</div>
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-white flex items-center justify-center text-black font-mono text-xs font-bold transition-transform hover:rotate-90">LS</div>
                 <span className="font-bold text-sm tracking-tighter uppercase font-mono">Lukeri Studio</span>
              </div>
              <p className="text-[10px] font-mono text-studio-gray uppercase tracking-widest leading-relaxed max-w-xs">

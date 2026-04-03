@@ -75,27 +75,29 @@ const ResponsiveHeroBanner: React.FC<ResponsiveHeroBannerProps> = ({
                             </span>
                         </div>
 
-                        <h1 className="sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] text-5xl text-white tracking-tighter font-serif font-normal">
+                        <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-white tracking-tighter font-serif font-normal">
                             {title}
-                            <br className="hidden sm:block" />
+                            <br />
                             <span className="italic opacity-90">{titleLine2}</span>
                         </h1>
 
-                        <p className="sm:text-lg text-base text-white/60 max-w-2xl mt-8 mx-auto leading-relaxed font-mono uppercase text-[10px] tracking-[0.2em]">
+                        <p className="text-[11px] sm:text-xs md:text-sm text-white/60 max-w-2xl mt-6 md:mt-8 mx-auto leading-relaxed font-mono uppercase tracking-[0.15em] md:tracking-[0.2em]">
                             {description}
                         </p>
 
-                        <div className="flex flex-col sm:flex-row sm:gap-6 mt-12 gap-4 items-center justify-center">
+                        <div className="flex flex-col sm:flex-row sm:gap-6 mt-8 md:mt-12 gap-3 items-center justify-center">
                             <a
                                 href={primaryButtonHref}
-                                className="group inline-flex items-center gap-2 hover:bg-white text-xs uppercase tracking-widest font-bold text-white hover:text-black bg-white/10 ring-white/20 ring-1 rounded-full py-4 px-8 transition-all duration-300"
+                                onClick={(e) => { if (primaryButtonHref.startsWith('#')) { e.preventDefault(); document.querySelector(primaryButtonHref)?.scrollIntoView({ behavior: 'smooth' }); }}}
+                                className="group inline-flex items-center gap-2 hover:bg-white text-xs uppercase tracking-widest font-bold text-white hover:text-black bg-white/10 ring-white/20 ring-1 rounded-full py-3 px-6 md:py-4 md:px-8 transition-all duration-300 w-full sm:w-auto justify-center"
                             >
                                 {primaryButtonText}
                                 <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                             </a>
                             <a
                                 href={secondaryButtonHref}
-                                className="inline-flex items-center gap-2 rounded-full bg-transparent px-8 py-4 text-xs uppercase tracking-widest font-bold text-white/60 hover:text-white transition-colors"
+                                onClick={(e) => { if (secondaryButtonHref.startsWith('#')) { e.preventDefault(); document.querySelector(secondaryButtonHref)?.scrollIntoView({ behavior: 'smooth' }); }}}
+                                className="inline-flex items-center gap-2 rounded-full bg-transparent px-6 py-3 md:px-8 md:py-4 text-xs uppercase tracking-widest font-bold text-white/60 hover:text-white transition-colors w-full sm:w-auto justify-center"
                             >
                                 {secondaryButtonText}
                                 <Play className="w-4 h-4 fill-white/10" />
@@ -111,7 +113,7 @@ const ResponsiveHeroBanner: React.FC<ResponsiveHeroBannerProps> = ({
                     {pillars.map((pillar, index) => (
                         <div 
                             key={index}
-                            className={`group relative p-12 md:p-16 flex flex-col justify-between min-h-[400px] transition-all duration-700 hover:bg-white/[0.03] ${index < 2 ? 'md:border-r border-b md:border-b-0 border-white/5' : ''}`}
+                            className={`group relative p-8 md:p-16 flex flex-col justify-between min-h-[300px] md:min-h-[400px] transition-all duration-700 hover:bg-white/[0.03] ${index < 2 ? 'md:border-r border-b md:border-b-0 border-white/5' : ''}`}
                         >
                             <div className="relative z-10">
                                 <span className="text-5xl md:text-7xl font-bold tracking-tighter text-white/5 group-hover:text-studio-primary transition-colors duration-700">

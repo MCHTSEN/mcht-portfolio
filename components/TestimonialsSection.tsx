@@ -235,17 +235,13 @@ const FeatureCard: React.FC<FeatureBoxProps> = ({ title, description, hasPhysics
     // A highly detailed skeuomorphic CRT style card
     return (
         <motion.div
-            drag
-            dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-            dragElastic={0.2}
-            whileHover={{ 
-                scale: 1.02, 
+            whileHover={{
+                scale: 1.02,
                 filter: 'brightness(1.15)',
                 y: -10,
                 boxShadow: '0 30px 60px -15px rgba(0,0,0,0.8), 0 0 20px rgba(79, 70, 229, 0.4), inset 0 2px 3px rgba(255,255,255,0.2), inset 0 -3px 5px rgba(0,0,0,0.5)'
             }}
-            whileDrag={{ scale: 1.05, cursor: 'grabbing', zIndex: 100 }}
-            className="feature-card-skeuo relative shrink-0 w-[320px] md:w-[380px] h-[450px] rounded-2xl cursor-grab transition-all duration-300"
+            className="feature-card-skeuo relative shrink-0 w-[280px] sm:w-[320px] md:w-[380px] h-[420px] sm:h-[450px] rounded-2xl transition-all duration-300"
             style={{
                 background: 'linear-gradient(145deg, #1e1e24, #121215)',
                 boxShadow: '0 20px 40px rgba(0,0,0,0.7), inset 0 2px 3px rgba(255,255,255,0.1), inset 0 -3px 5px rgba(0,0,0,0.5)',
@@ -325,7 +321,7 @@ const FeatureCard: React.FC<FeatureBoxProps> = ({ title, description, hasPhysics
 
 export const TestimonialsSection: React.FC = () => {
     return (
-        <section className="relative w-full py-32 overflow-hidden bg-black flex flex-col items-center">
+        <section className="relative w-full py-32 bg-black flex flex-col items-center overflow-x-clip overflow-y-visible">
             {/* Global WebGL Background for this section */}
             <WebGLBackground />
             
@@ -354,10 +350,16 @@ export const TestimonialsSection: React.FC = () => {
                     0% { transform: translateX(0%); }
                     100% { transform: translateX(-50%); }
                 }
+                @media (max-width: 767px) {
+                    .animate-marquee-slow {
+                        animation: none;
+                        width: max-content !important;
+                    }
+                }
             `}} />
 
             <div className="relative z-10 max-w-[1800px] w-full px-6 mb-16 text-center">
-                <h2 className="text-5xl md:text-7xl font-bold uppercase tracking-tighter text-white drop-shadow-2xl" style={{ textShadow: '0 4px 10px rgba(0,0,0,0.8), 0 0 20px rgba(79, 70, 229, 0.4)' }}>
+                <h2 className="text-3xl sm:text-5xl md:text-7xl font-bold uppercase tracking-tighter text-white drop-shadow-2xl" style={{ textShadow: '0 4px 10px rgba(0,0,0,0.8), 0 0 20px rgba(79, 70, 229, 0.4)' }}>
                     Müşterilerimiz <span className="text-[#4f46e5]">Ne Diyor?</span>
                 </h2>
                 <p className="mt-4 text-white/50 font-mono tracking-widest uppercase text-sm crt-text">
@@ -366,8 +368,8 @@ export const TestimonialsSection: React.FC = () => {
             </div>
 
             {/* Infinitely Looping Marquee container */}
-            <div className="relative z-10 w-full overflow-hidden py-12">
-                <div className="flex w-[200%] md:w-[200%] gap-8 px-4 animate-marquee-slow hover:[animation-play-state:paused] cursor-grab active:cursor-grabbing">
+            <div className="relative z-30 w-full overflow-x-auto md:overflow-hidden py-12 scrollbar-hide touch-pan-x">
+                <div className="flex w-max md:w-[200%] gap-6 sm:gap-8 px-4 animate-marquee-slow md:hover:[animation-play-state:paused]">
                     
                     {/* First logical set */}
                     <FeatureCard 

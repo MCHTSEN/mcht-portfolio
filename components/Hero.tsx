@@ -3,7 +3,7 @@ import ResponsiveHeroBanner from './ui/responsive-hero-banner';
 
 export const Hero: React.FC = () => {
     return (
-        <div className="relative">
+        <div className="relative pt-24 md:pt-0">
             <ResponsiveHeroBanner
                 badgeLabel="New"
                 badgeText="Gelecek Nesil Dijital Ürün Stüdyosu 2026"
@@ -11,7 +11,9 @@ export const Hero: React.FC = () => {
                 titleLine2="BİRLİKTE İNŞA EDELİM"
                 description="Fikirleri yüksek performanslı dijital ürünlere dönüştüren yazılım ve tasarım stüdyosuyuz."
                 primaryButtonText="Projeye Başla"
+                primaryButtonHref="#contact"
                 secondaryButtonText="Dosyamızı Gör"
+                secondaryButtonHref="#work"
                 ctaButtonText="Randevu Al"
                 partnersTitle="TEKNİK ÜSTÜNLÜK & ETKİ"
             />

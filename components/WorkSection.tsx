@@ -43,10 +43,10 @@ export const WorkSection: React.FC = () => {
 
   return (
     <>
-      <section id="work" aria-labelledby="work-heading" className="py-48 bg-transparent">
+      <section id="work" aria-labelledby="work-heading" className="py-24 md:py-48 bg-transparent">
         <div className="max-w-[1800px] mx-auto px-6">
           
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-40">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 md:gap-12 mb-20 md:mb-40">
             <div className="space-y-8">
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
@@ -61,7 +61,7 @@ export const WorkSection: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-6xl md:text-9xl font-bold tracking-tighter leading-[0.85] uppercase"
+                className="text-4xl md:text-7xl lg:text-9xl font-bold tracking-tighter leading-[0.85] uppercase"
               >
                 PROJE<br /><span className="text-studio-primary">ARŞİVİ.</span>
               </motion.h2>
@@ -78,7 +78,7 @@ export const WorkSection: React.FC = () => {
             </motion.div>
           </div>
 
-          <div className="space-y-64">
+          <div className="space-y-32 md:space-y-64">
             {projectsData.map((project, index) => (
               <motion.div 
                 key={project.id}
@@ -89,7 +89,7 @@ export const WorkSection: React.FC = () => {
                 onClick={() => openProject(project.id)}
                 className="group cursor-pointer"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 items-start">
                   
                   {/* Left Column: Info */}
                   <div className="lg:col-span-5 space-y-12 lg:sticky lg:top-48">
@@ -105,7 +105,7 @@ export const WorkSection: React.FC = () => {
                     </div>
 
                     <div className="space-y-6">
-                       <h3 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight uppercase relative inline-block group-hover:text-studio-primary transition-colors duration-500">
+                       <h3 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tighter leading-tight uppercase relative inline-block group-hover:text-studio-primary transition-colors duration-500">
                         {project.title}
                       </h3>
                       <div className="flex items-center gap-3">
@@ -129,7 +129,7 @@ export const WorkSection: React.FC = () => {
                     </div>
 
                     <div className="pt-8">
-                       <button className="group/btn relative px-8 py-4 bg-white text-black text-[10px] font-bold uppercase tracking-widest overflow-hidden transition-all rounded-sm flex items-center gap-3">
+                       <button className="group/btn relative px-6 py-3 md:px-8 md:py-4 bg-white text-black text-[10px] font-bold uppercase tracking-widest overflow-hidden transition-all rounded-sm flex items-center gap-3 w-full sm:w-auto justify-center sm:justify-start">
                          <span className="relative z-10 flex items-center gap-3">
                             PROJEYİ KEŞFET <ExternalLink size={14} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                          </span>
@@ -165,22 +165,22 @@ export const WorkSection: React.FC = () => {
                          </div>
                        ) : (
                          /* MOBILE SHOWCASE (Staggered) */
-                         <div className="relative w-full h-full flex items-center justify-center gap-8 md:gap-16">
-                           <motion.div 
+                         <div className="relative w-full h-full flex items-center justify-center gap-3 sm:gap-8 md:gap-16">
+                           <motion.div
                              whileHover={{ y: -20, rotate: -2 }}
-                             className="w-32 md:w-44 aspect-[9/19] bg-zinc-900 rounded-3xl border border-studio-border/30 shadow-xl overflow-hidden transform -rotate-6 translate-y-8 group-hover:translate-y-4 transition-transform duration-700"
+                             className="w-20 sm:w-32 md:w-44 aspect-[9/19] bg-zinc-900 rounded-2xl sm:rounded-3xl border border-studio-border/30 shadow-xl overflow-hidden transform -rotate-6 translate-y-8 group-hover:translate-y-4 transition-transform duration-700"
                            >
                               <img src={project.screenshots[0]} alt={`${project.title} mobil ekran görüntüsü 1`} className="w-full h-full object-cover" width="270" height="585" loading="lazy" />
                            </motion.div>
                            <motion.div 
                              whileHover={{ y: -20, scale: 1.05 }}
-                             className="w-36 md:w-52 aspect-[9/19] bg-zinc-900 rounded-[2rem] border border-studio-border/30 shadow-2xl overflow-hidden z-20 scale-110 transform translate-y-0 group-hover:-translate-y-4 transition-transform duration-700"
+                             className="w-24 sm:w-36 md:w-52 aspect-[9/19] bg-zinc-900 rounded-2xl sm:rounded-[2rem] border border-studio-border/30 shadow-2xl overflow-hidden z-20 scale-110 transform translate-y-0 group-hover:-translate-y-4 transition-transform duration-700"
                            >
                               <img src={project.screenshots[1]} alt={`${project.title} mobil ekran görüntüsü 2`} className="w-full h-full object-cover" width="270" height="585" loading="lazy" />
                            </motion.div>
                            <motion.div 
                              whileHover={{ y: -20, rotate: 2 }}
-                             className="w-32 md:w-44 aspect-[9/19] bg-zinc-900 rounded-3xl border border-studio-border/30 shadow-xl overflow-hidden transform rotate-6 translate-y-8 group-hover:translate-y-4 transition-transform duration-700"
+                             className="w-20 sm:w-32 md:w-44 aspect-[9/19] bg-zinc-900 rounded-2xl sm:rounded-3xl border border-studio-border/30 shadow-xl overflow-hidden transform rotate-6 translate-y-8 group-hover:translate-y-4 transition-transform duration-700"
                            >
                               <img src={project.screenshots[2]} alt={`${project.title} mobil ekran görüntüsü 3`} className="w-full h-full object-cover" width="270" height="585" loading="lazy" />
                            </motion.div>

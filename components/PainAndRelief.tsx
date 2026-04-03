@@ -4,10 +4,10 @@ import React from 'react';
 
 const items = [
   {
-    category: "Ölçeklenebilirlik",
-    title: "2.5M+ Aylık Aktif Kullanıcı",
-    description: "Tasarladığımız ve geliştirdiğimiz uygulamalar aylık milyonlarca aktif kullanıcıya sıfır kesintiyle hizmet veriyor.",
-    tags: ["High Traffic", "Reliability", "Architecture"],
+    category: "Küresel Erişim",
+    title: "43 Ülkede Aktif Kullanıcı",
+    description: "Tasarladığımız ve geliştirdiğimiz uygulamalar 5 kıtada kullanıcılara sıfır kesintiyle hizmet veriyor.",
+    tags: ["Global", "Reliability", "Scale"],
     iconColor: "from-blue-500 to-indigo-500"
   },
   {
@@ -19,30 +19,30 @@ const items = [
   },
   {
     category: "Teslimat Güvencesi",
-    title: "40+ Başarılı Uygulama",
-    description: "Fikir aşamasından mağaza yayınına kadar tam zamanında ve vaat edilen bütçeyle teslim edilmiş onlarca başarılı mobil ve web projesi.",
-    tags: ["On-Time Delivery", "Track Record"],
+    title: "Vaat Edilen Bütçede, Zamanında",
+    description: "Fikir aşamasından mağaza yayınına kadar her proje, üzerinde anlaşılan bütçe ve takvim dahilinde teslim edilir — sürpriz yok.",
+    tags: ["On-Time Delivery", "Budget Control"],
     iconColor: "from-indigo-500 to-purple-500"
   },
   {
-    category: "Sektörel Liderlik",
-    title: "Sektör Lideri Uygulamalar",
-    description: "Yazdığımız temiz kod ve sunduğumuz kusursuz kullanıcı deneyimi sayesinde müşterilerimiz kendi sektörlerinde öncü konuma ulaşıyor.",
-    tags: ["Scalable Code", "Market Leader"],
+    category: "Ölçeklenebilirlik",
+    title: "Sıfır Kesintili Mimariler",
+    description: "Kullanıcı sayısı 10 kat artsa da sistem ayakta kalır. Ölçeklenmek için kodu yeniden yazmak zorunda kalmazsınız.",
+    tags: ["High Availability", "Architecture"],
     iconColor: "from-blue-400 to-cyan-400"
   },
   {
     category: "Market Başarısı",
-    title: "5+ Kez 'Günün Uygulaması'",
-    description: "Apple ve Google algoritmalarının sevdiği, organik indirme rekorları kıran ve editoryal olarak öne çıkarılan ödüllü mobil deneyimler.",
+    title: "Editoryal Öne Çıkan Uygulamalar",
+    description: "Apple ve Google editörlerinin dikkatini çeken, organik indirme rekorları kıran ve mağaza algoritmalarıyla uyumlu mobil deneyimler.",
     tags: ["Featured", "ASO", "Award Winning"],
     iconColor: "from-purple-500 to-indigo-500"
   },
   {
     category: "Yüksek Performans",
-    title: "< 0.1s Ortalama Yanıt",
-    description: "Kullanıcı deneyimini mükemmelleştiren, anında tepki veren mikroservis mimarileri ve son derece optimize edilmiş render süreçleri.",
-    tags: ["Performance", "Microservices"],
+    title: "Milisaniyeler İçinde Yanıt",
+    description: "Kullanıcı deneyimini mükemmelleştiren, anında tepki veren mimariler ve son derece optimize edilmiş render süreçleri.",
+    tags: ["Performance", "Optimization"],
     iconColor: "from-cyan-400 to-emerald-400"
   }
 ];
@@ -71,7 +71,7 @@ export const PainAndRelief: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl md:text-[5.5rem] font-bold tracking-tighter leading-[0.95] uppercase text-zinc-900"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[5.5rem] font-bold tracking-tighter leading-[1.05] uppercase text-zinc-900"
             >
               TEKNOLOJİ DEĞİL,<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">SONUÇ ÜRETİYORUZ.</span>

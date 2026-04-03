@@ -11,7 +11,7 @@ export const About: React.FC = () => {
       </div>
 
       <div className="max-w-[1800px] mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-24">
           
           <div className="lg:col-span-6 space-y-12">
             <motion.div 
@@ -42,7 +42,7 @@ export const About: React.FC = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="text-xl md:text-2xl text-zinc-600 font-medium max-w-2xl leading-relaxed"
+              className="text-base md:text-xl lg:text-2xl text-zinc-600 font-medium max-w-2xl leading-relaxed"
             >
               Bir ürünün başarısı kodun kalitesi kadar iş hedeflerine olan hizmetiyle ölçülür. Agile süreçlerimiz, şeffaf iletişimimiz ve kanıtlanmış tekniklerimizle projenizi bütçe ve zaman garantisiyle hayata geçiriyoruz.
             </motion.p>
@@ -55,15 +55,15 @@ export const About: React.FC = () => {
               className="pt-8 flex flex-col sm:flex-row gap-8 sm:gap-16"
             >
                <div>
-                  <div className="text-5xl md:text-7xl font-bold tracking-tighter text-zinc-900">1M+</div>
+                  <div className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter text-zinc-900">1M+</div>
                   <div className="text-xs font-mono font-bold uppercase tracking-widest text-zinc-500 mt-2">Aktif Kullanıcı</div>
                </div>
                <div>
-                  <div className="text-5xl md:text-7xl font-bold tracking-tighter text-zinc-900">%99.9</div>
+                  <div className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter text-zinc-900">%99.9</div>
                   <div className="text-xs font-mono font-bold uppercase tracking-widest text-zinc-500 mt-2">Sistem Uptime</div>
                </div>
                <div>
-                  <div className="text-5xl md:text-7xl font-bold tracking-tighter text-zinc-900">3+</div>
+                  <div className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter text-zinc-900">3+</div>
                   <div className="text-xs font-mono font-bold uppercase tracking-widest text-zinc-500 mt-2">Tasarım Ödülü</div>
                </div>
             </motion.div>

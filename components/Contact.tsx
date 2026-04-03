@@ -4,10 +4,10 @@ import React from 'react';
 
 export const Contact: React.FC = () => {
   return (
-    <section id="contact" aria-labelledby="contact-heading" className="py-48 bg-transparent overflow-hidden">
+    <section id="contact" aria-labelledby="contact-heading" className="py-24 md:py-48 bg-transparent overflow-hidden">
       <div className="max-w-[1800px] mx-auto px-6">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-24">
           
           {/* Header & Intent */}
           <div className="lg:col-span-6 space-y-16">
@@ -26,7 +26,7 @@ export const Contact: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-6xl md:text-9xl font-bold tracking-tighter leading-[0.85] uppercase"
+                className="text-4xl md:text-7xl lg:text-9xl font-bold tracking-tighter leading-[0.85] uppercase"
               >
                 HADİ<br /><span className="text-studio-primary">BAŞLAYALIM.</span>
               </motion.h2>
@@ -37,7 +37,7 @@ export const Contact: React.FC = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-xl md:text-2xl text-studio-gray font-medium max-w-md leading-relaxed tracking-tight border-l-2 border-studio-primary pl-8"
+              className="text-base md:text-xl lg:text-2xl text-studio-gray font-medium max-w-md leading-relaxed tracking-tight border-l-2 border-studio-primary pl-6 md:pl-8"
             >
               Yeni bir projeye mi başlıyorsunuz? Teknik partneriniz olmaya hazırız. Hemen iletişime geçin.
             </motion.p>
@@ -86,7 +86,7 @@ export const Contact: React.FC = () => {
                   icon: Phone, 
                   label: "Telefon", 
                   value: "Tıkla & Ara", 
-                  href: "tel:+905050161116",
+                  href: "tel:+905423251016",
                   color: "bg-studio-primary" 
                 }
               ].map((item, idx) => (

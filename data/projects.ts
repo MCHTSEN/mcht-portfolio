@@ -2,36 +2,6 @@ import { ProjectData } from '../components/ProjectDetail';
 
 export const projectsData: ProjectData[] = [
   {
-    id: 'yetis',
-    title: 'Yetiş',
-    subtitle: 'Acil Durum ve Güvenlik Ekosistemi',
-    period: '2025',
-    location: 'Remote / Türkiye',
-    type: 'studio-product',
-    description: 'UUID tabanlı web takip sistemli, saniyeler içinde yardım çağıran gelişmiş acil durum platformu.',
-    story: `Yetiş, kritik anlarda saniyelerin hayat kurtardığı prensibiyle geliştirildi. Sadece uygulama içi bir yardım butonu değil, uygulama yükleme zorunluluğunu ortadan kaldıran web tabanlı canlı takip ekosistemi inşa ettik.
-    
-    Kullanıcılar tehlike anında tek dokunuşla güvenilir kişilerine SMS ile benzersiz bir takip linki gönderir ve takipçiler web tarayıcısı üzerinden milisaniyelik gecikmeyle canlı konumu izleyebilir.`,
-    challenge: `Arka planda kesintisiz konum gönderimi sağlayan Foreground servis yönetimi ve takipçilerin uygulama yüklemeden (Flutter Web üzerinden) gerçek zamanlı konum takibi yapabilmesi temel teknik zorlukları oluşturuyordu.`,
-    solution: `Supabase Realtime ve Mapbox SDK entegrasyonu ile ultra-düşük gecikmeli bir konum motoru kurduk. Foreground Task yönetimi ile servis sürekliliğini, Netgsm API ile SMS OTP ve acil durum uyarı sistemini mühendislik altına aldık.`,
-    impact: `Yetiş, Türkiye'ye özel Netgsm entegrasyonu ve KVKK uyumlu (30 gün sonra veri silme) altyapısı ile dijital güvenlik alanında yeni bir standart belirliyor. Uygulama bağımsız web takibi özelliği ile yardım ağını herkes için erişilebilir kılıyor.`,
-    techStack: ['Flutter', 'Supabase', 'Mapbox SDK', 'PostGIS', 'Realtime', 'SMS OTP', 'Foreground Task'],
-    features: ['Akıllı SOS Butonu', 'Uygulamasız Web Takibi', 'Netgsm API Entegrasyonu', 'Güvenli Rota Görselleştirme', 'KVKK Uyumlu Veri İmhası', 'Liva / VIP Takip Paneli'],
-    screenshots: [
-      '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.53.webp',
-      '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.53 (1).webp',
-      '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.53 (2).webp',
-      '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.53 (3).webp',
-      '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.53 (4).webp',
-      '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.53 (5).webp',
-      '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.54.webp',
-    ],
-    coverImage: '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.53.webp',
-    brandColor: 'bg-[#FF3B30]',
-    brandTextColor: 'text-white',
-    secondaryColor: 'bg-[#FF3B30]/5',
-  },
-  {
     id: 'piqup',
     title: 'Piqup',
     subtitle: 'Ödüllü Mobilite Platformu',
@@ -179,6 +149,36 @@ Fabrika sahası ile üst yönetim arasındaki boşluğu dolduran birleşik bir d
     brandColor: 'bg-[#2563EB]',
     brandTextColor: 'text-white',
     secondaryColor: 'bg-[#2563EB]/5',
+  },
+  {
+    id: 'yetis',
+    title: 'Yetiş',
+    subtitle: 'Acil Durum ve Güvenlik Ekosistemi',
+    period: '2025',
+    location: 'Remote / Türkiye',
+    type: 'studio-product',
+    description: 'UUID tabanlı web takip sistemli, saniyeler içinde yardım çağıran gelişmiş acil durum platformu.',
+    story: `Yetiş, kritik anlarda saniyelerin hayat kurtardığı prensibiyle geliştirildi. Sadece uygulama içi bir yardım butonu değil, uygulama yükleme zorunluluğunu ortadan kaldıran web tabanlı canlı takip ekosistemi inşa ettik.
+
+    Kullanıcılar tehlike anında tek dokunuşla güvenilir kişilerine SMS ile benzersiz bir takip linki gönderir ve takipçiler web tarayıcısı üzerinden milisaniyelik gecikmeyle canlı konumu izleyebilir.`,
+    challenge: `Arka planda kesintisiz konum gönderimi sağlayan Foreground servis yönetimi ve takipçilerin uygulama yüklemeden (Flutter Web üzerinden) gerçek zamanlı konum takibi yapabilmesi temel teknik zorlukları oluşturuyordu.`,
+    solution: `Supabase Realtime ve Mapbox SDK entegrasyonu ile ultra-düşük gecikmeli bir konum motoru kurduk. Foreground Task yönetimi ile servis sürekliliğini, Netgsm API ile SMS OTP ve acil durum uyarı sistemini mühendislik altına aldık.`,
+    impact: `Yetiş, Türkiye'ye özel Netgsm entegrasyonu ve KVKK uyumlu (30 gün sonra veri silme) altyapısı ile dijital güvenlik alanında yeni bir standart belirliyor. Uygulama bağımsız web takibi özelliği ile yardım ağını herkes için erişilebilir kılıyor.`,
+    techStack: ['Flutter', 'Supabase', 'Mapbox SDK', 'PostGIS', 'Realtime', 'SMS OTP', 'Foreground Task'],
+    features: ['Akıllı SOS Butonu', 'Uygulamasız Web Takibi', 'Netgsm API Entegrasyonu', 'Güvenli Rota Görselleştirme', 'KVKK Uyumlu Veri İmhası', 'Liva / VIP Takip Paneli'],
+    screenshots: [
+      '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.53.webp',
+      '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.53 (1).webp',
+      '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.53 (2).webp',
+      '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.53 (3).webp',
+      '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.53 (4).webp',
+      '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.53 (5).webp',
+      '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.54.webp',
+    ],
+    coverImage: '/assets/project-screenshots/yetis/WhatsApp Image 2026-01-21 at 12.43.53.webp',
+    brandColor: 'bg-[#FF3B30]',
+    brandTextColor: 'text-white',
+    secondaryColor: 'bg-[#FF3B30]/5',
   },
 ];
 

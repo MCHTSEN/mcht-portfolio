@@ -75,7 +75,7 @@ export const About: React.FC = () => {
             {[
               { icon: Terminal, title: "Teknik Ölçeklenebilirlik", desc: "Kod tabanını gelecekteki 10x kullanıcı akışına hazır mimarilerle (Clean Architecture vb.) kurguluyoruz, yatırımınız korunuyor." },
               { icon: PenTool, title: "Premium Brand Algısı", desc: "Kullanıcıya 'Güven' veren, pazar ortalamasının çok üzerinde bir estetik kalite standartı sağlıyoruz." },
-              { icon: Cpu, title: "Şeffaf Agile Süreç", desc: "Gizli maliyetler yok. Haftalık sprint raporları ve doğrudan mühendislerle Slack iletişimi ile projenin her anına hakimsiniz." }
+              { icon: Cpu, title: "ŞEFFAF AGILE SÜREÇ", desc: "Gizli maliyetler yok. Haftalık sprint raporları ve doğrudan mühendislerle Slack iletişimi ile projenin her anına hakimsiniz." }
             ].map((feature, idx) => (
               <motion.div 
                 key={idx}

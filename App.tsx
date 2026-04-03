@@ -5,7 +5,7 @@ import { CustomCursor } from './components/CustomCursor';
 import { Hero } from './components/Hero';
 import { Navbar } from './components/Navbar';
 import { PainAndRelief } from './components/PainAndRelief';
-import { TestimonialsSection } from './components/TestimonialsSection';
+// import { TestimonialsSection } from './components/TestimonialsSection';
 import { WorkSection } from './components/WorkSection';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
       <main id="main-content" className="relative z-10" role="main">
         <Hero />
         <PainAndRelief />
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
         <WorkSection />
         <About />
         <Contact />
